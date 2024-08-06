@@ -1,30 +1,169 @@
-.App {
-  text-align: center;
-  overflow-x: hidden; /* Previne rolagem horizontal */
-  font-family: Arial, sans-serif;
+/* src/App.css */
+
+@font-face {
+  font-family: 'Metropol';
+  src: url('./Fontes/Metropol.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.navigation {
+.App {
+  font-family: 'Metropol', sans-serif;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+  position: relative;
+  background-color: #f2f2f2; /* Cor de fundo */
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.overlay {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   z-index: 1000;
+  transition: backdrop-filter 0.3s ease;
 }
 
-.navigation a {
-  color: white;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #261914; /* Cor primária */
+  color: #D9C9C5; /* Cor secundária */
+  position: absolute;
+  top: 0;
+  z-index: 10; /* Garante que o cabeçalho esteja sobre os slides */
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  color: #D9C9C5; /* Cor secundária */
+}
+
+.menu-icon:hover {
+  background-color: rgba(217, 201, 197, 0.2); /* Cor secundária com opacidade */
+}
+
+.logo {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.contact-button button {
+  background-color: #D9C9C5; /* Cor secundária */
+  color: #261914; /* Cor primária */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-button button:hover {
+  background-color: #c8b2ad; /* Variante mais escura da cor secundária */
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #261914; /* Cor primária */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Oculto inicialmente */
+  z-index: 1500;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Aparece quando aberto */
+}
+
+.sidebar a {
+  color: #D9C9C5; /* Cor secundária */
   text-decoration: none;
-  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
   transition: color 0.3s;
 }
 
-.navigation a:hover {
-  color: #ff9800; /* Cor de destaque ao passar o mouse */
+.sidebar a:hover {
+  color: #f2f2f2; /* Cor de fundo ao pairar */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Efeito de fade */
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  color: #261914;
+  padding-left: 50px;
+}
+
+.slide-content h2{
+  font-size: 100px;
+  margin: 0;
+}
+
+.slide-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100; /* Garante que a barra de controle esteja sobre os slides */
+}
+
+.slide-controls button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slide-controls button:hover {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .section {
@@ -33,17 +172,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #261914; /* Cor primária */
 }
 
 .section1 {
-  background-color: #282c34; /* Cor de fundo para a seção 1 */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  color: #261914; /* Cor primária */
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .section2 {
-  background-color: #4CAF50; /* Cor de fundo para a seção 2 */
+  background-color: #D9C9C5; /* Cor secundária */
 }
 
 .section3 {
-  background-color: #ff9800; /* Cor de fundo para a seção 3 */
+  background-color: #c8b2ad; /* Variante mais escura da cor secundária */
+}
+
+.section4 {
+  background-color: #1E88E5; /* Cor de uma seção específica, pode ser ajustada */
+}
+
+.no-scroll {
+  overflow: hidden;
 }
