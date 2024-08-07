@@ -175,7 +175,7 @@ function App() {
 
   <div id="section13" className="section section4">
     <h1>Seção 13</h1>
-    <p>Conteúdo da quarta seção.</p>
+    <p>Conteúdo da 13 seção.</p>
     <p> ISMAEL LINDO</p>
   </div>
 
