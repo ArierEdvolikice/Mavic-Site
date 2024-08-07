@@ -78,14 +78,17 @@ function App() {
       <a href="#section2" onClick={toggleMenu}>Seção 2</a>
       <a href="#section3" onClick={toggleMenu}>Seção 3</a>
       <a href="#section4" onClick={toggleMenu}>Seção 4</a>
-      <a href="#section1" onClick={toggleMenu}>Seção 5</a>
-      <a href="#section2" onClick={toggleMenu}>Seção 6</a>
-      <a href="#section3" onClick={toggleMenu}>Seção 7</a>
-      <a href="#section4" onClick={toggleMenu}>Seção 8</a>
-      <a href="#section1" onClick={toggleMenu}>Seção 9</a>
-      <a href="#section2" onClick={toggleMenu}>Seção 10</a>
-      <a href="#section3" onClick={toggleMenu}>Seção 11</a>
-      <a href="#section4" onClick={toggleMenu}>Seção 12</a>
+      <a href="#section5" onClick={toggleMenu}>Seção 5</a>
+      <a href="#section6" onClick={toggleMenu}>Seção 6</a>
+      <a href="#section7" onClick={toggleMenu}>Seção 7</a>
+      <a href="#section8" onClick={toggleMenu}>Seção 8</a>
+      <a href="#section9" onClick={toggleMenu}>Seção 9</a>
+      <a href="#section10" onClick={toggleMenu}>Seção 10</a>
+      <a href="#section11" onClick={toggleMenu}>Seção 11</a>
+      <a href="#section12" onClick={toggleMenu}>Seção 12</a>
+      <a href="#section13" onClick={toggleMenu}>Seção 13</a>
+
+      
     </div>
 
     <div className="slide-controls">
@@ -128,49 +131,49 @@ function App() {
     <p> ERICK DOENTE</p>
   </div>
 
-  <div id="section2" className="section section2">
+  <div id="section5" className="section section2">
     <h1>Seção 5</h1>
     <p>Conteúdo da segunda seção.</p>
   </div>
 
-  <div id="section3" className="section section3">
+  <div id="section6" className="section section3">
     <h1>Seção 6</h1>
     <p>Conteúdo da terceira seção.</p>
   </div>
 
-  <div id="section4" className="section section4">
+  <div id="section7" className="section section4">
     <h1>Seção 7</h1>
     <p>Conteúdo da quarta seção.</p>
     <p> ERICK DOENTE</p>
   </div>
 
-  <div id="section2" className="section section2">
+  <div id="section8" className="section section2">
     <h1>Seção 8</h1>
     <p>Conteúdo da segunda seção.</p>
   </div>
 
-  <div id="section3" className="section section3">
+  <div id="section9" className="section section3">
     <h1>Seção 9</h1>
     <p>Conteúdo da terceira seção.</p>
   </div>
 
-  <div id="section4" className="section section4">
+  <div id="section10" className="section section4">
     <h1>Seção 10</h1>
     <p>Conteúdo da quarta seção.</p>
     <p> ERICK DOENTE</p>
   </div>
 
-  <div id="section2" className="section section2">
+  <div id="section11" className="section section2">
     <h1>Seção 11</h1>
     <p>Conteúdo da segunda seção.</p>
   </div>
 
-  <div id="section3" className="section section3">
+  <div id="section12" className="section section3">
     <h1>Seção 12</h1>
     <p>Conteúdo da terceira seção.</p>
   </div>
 
-  <div id="section4" className="section section4">
+  <div id="section13" className="section section4">
     <h1>Seção 13</h1>
     <p>Conteúdo da quarta seção.</p>
     <p> ERICK DOENTE</p>
