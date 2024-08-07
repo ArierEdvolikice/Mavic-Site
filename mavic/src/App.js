@@ -170,13 +170,13 @@ function App() {
 
   <div id="section12" className="section section3">
     <h1>Seção 12</h1>
-    <p>Conteúdo da terceira seção.</p>
+    <p>Conteúdo da 12 seção.</p>
   </div>
 
   <div id="section13" className="section section4">
     <h1>Seção 13</h1>
     <p>Conteúdo da quarta seção.</p>
-    <p> ERICK DOENTE</p>
+    <p> ISMAEL LINDO</p>
   </div>
   
 </div>
