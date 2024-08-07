@@ -122,7 +122,7 @@ function App() {
 
   <div id="section3" className="section section3">
     <h1>Seção 3</h1>
-    <p>Conteúdo da terceira seçãoo.</p>
+    <p>Conteúdo da terceira seção.</p>
   </div>
 
   <div id="section4" className="section section4">
@@ -177,8 +177,10 @@ function App() {
     <h1>Seção 13</h1>
     <p>Conteúdo da 13 seção.</p>
     <p> ISMAEL LINDO</p>
+    <p>Conteúdo da quarta seção.</p>
+    <p> ISMAEL INSURPOTÁVEL</p>
   </div>
-
+  
 </div>
   );
 }
