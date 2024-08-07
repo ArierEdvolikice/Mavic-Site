@@ -149,7 +149,7 @@ function App() {
 
   <div id="section8" className="section section2">
     <h1>Seção 8</h1>
-    <p>Conteúdo da segunda seção.</p>
+    <p>Conteúdo da oitava seção.</p>
   </div>
 
   <div id="section9" className="section section3">
