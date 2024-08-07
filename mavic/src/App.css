@@ -35,10 +35,9 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 0 42px;
   width: 100%;
   box-sizing: border-box;
-  background-color: #261914; /* Cor primária */
   color: #D9C9C5; /* Cor secundária */
   position: absolute;
   top: 0;
@@ -64,18 +63,20 @@ p {
 }
 
 .contact-button button {
-  background-color: #D9C9C5; /* Cor secundária */
-  color: #261914; /* Cor primária */
-  border: none;
+  background-color: transparent;
+  font-family: 'Metropol', sans-serif;
+  color: #f2f2f2;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 1px solid #f2f2f2;
+  border-radius: 50px;
 }
 
 .contact-button button:hover {
-  background-color: #c8b2ad; /* Variante mais escura da cor secundária */
+  background-color: #c8b2ad;
+  border: 1px solid #c8b2ad;
 }
 
 .sidebar {
@@ -134,12 +135,15 @@ p {
   position: relative;
   z-index: 10;
   text-align: left;
-  color: #261914;
+  color: #f2f2f2;
   padding-left: 50px;
+  padding-right: 40%;
+  padding-top: 5%;
+  line-height: 0.9;
 }
 
 .slide-content h2{
-  font-size: 100px;
+  font-size: 80px;
   margin: 0;
 }
 
@@ -153,17 +157,20 @@ p {
   z-index: 100; /* Garante que a barra de controle esteja sobre os slides */
 }
 
-.slide-controls button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  padding: 10px;
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.slide-controls button:hover {
+.dot.active {
   background-color: rgba(255, 255, 255, 1);
+  width: 15px;
+  height: 15px;
+  margin-top: -3px;
 }
 
 .section {

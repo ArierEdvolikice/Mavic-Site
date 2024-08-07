@@ -11,15 +11,15 @@ function App() {
   const slides = [
     { 
       image: `url(${imagemFundo01})`, 
-      text: { title: 'Título 1', description: 'Descrição 1' }
+      text: { title: 'Lorem ipsum dolor sit amet', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
     },
     { 
       image: `url(${imagemFundo02})`, 
-      text: { title: 'Título 2', description: 'Descrição 2' }
+      text: { title: 'Duis aute irure dolor in reprehenderit', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
     },
     { 
       image: `url(${imagemFundo03})`, 
-      text: { title: 'Título 3', description: 'Descrição 3' }
+      text: { title: 'Excepteur sint occaecat cupidatat', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
     }
   ];
 
@@ -52,7 +52,7 @@ function App() {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 5000); // Muda o slide a cada 5 segundos
+    const intervalId = setInterval(nextSlide, 10000);
 
     return () => clearInterval(intervalId); // Limpa o intervalo ao desmontar o componente
   }, []);
@@ -66,10 +66,10 @@ function App() {
         &#9776;
       </div>
       <div className="logo">
-        <h1>Minha Logo</h1>
+        <h1>Mavic</h1>
       </div>
       <div className="contact-button">
-        <button onClick={() => alert('Contato')}>Contato</button>
+        <button onClick={() => alert('Contato')}>contate-nos</button>
       </div>
     </div>
 
@@ -81,9 +81,14 @@ function App() {
     </div>
 
     <div className="slide-controls">
-      <button onClick={prevSlide}>❮</button>
-      <button onClick={nextSlide}>❯</button>
-    </div>
+  {slides.map((_, index) => (
+    <div
+      key={index}
+      className={`dot ${currentSlide === index ? 'active' : ''}`}
+      onClick={() => setCurrentSlide(index)}
+    ></div>
+  ))}
+</div>
 
     {slides.map((slide, index) => (
       <div
