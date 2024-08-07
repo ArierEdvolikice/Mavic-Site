@@ -143,7 +143,7 @@ function App() {
 
   <div id="section7" className="section section4">
     <h1>Seção 7</h1>
-    <p>Conteúdo da quarta seção.</p>
+    <p>Conteúdo da setima seção.</p>
     <p> ERICK DOENTE</p>
   </div>
 
