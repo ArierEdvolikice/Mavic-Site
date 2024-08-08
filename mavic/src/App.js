@@ -131,52 +131,52 @@ function App() {
     <p>ERICK GATÃO E BONITÃO</p>
   </div>
 
-  <div id="section5" className="section section2">
+  <div id="section5" className="section section5">
     <h1>Seção 5</h1>
     <p>Conteúdo da segunda seção.</p>
   </div>
 
-  <div id="section6" className="section section3">
+  <div id="section6" className="section section6">
     <h1>Seção 6</h1>
     <p>Conteúdo da terceira seção.</p>
   </div>
 
-  <div id="section7" className="section section4">
+  <div id="section7" className="section section7">
     <h1>Seção 7</h1>
     <p>Conteúdo da setima seção.</p>
     <p> ERICK DOENTE</p>
   </div>
 
-  <div id="section8" className="section section2">
+  <div id="section8" className="section section8">
     <h1>Seção 8</h1>
     <p>Conteúdo da oitava seção.</p>
   </div>
 
-  <div id="section9" className="section section3">
+  <div id="section9" className="section section9">
     <h1>Seção 9</h1>
     <p>Conteúdo da nona seção</p>
   </div>
 
-  <div id="section10" className="section section4">
+  <div id="section10" className="section section10">
     <h1>Seção 10</h1>
     <p>Conteúdo da quarta seção.</p>
-    <p> ERICK DOENTE</p>
+    <p> ERICK Gostoso</p>
   </div>
 
-  <div id="section11" className="section section2">
+  <div id="section11" className="section section11">
     <h1>Seção 11</h1>
     <p>Conteúdo da décima primeira.</p>
   </div>
 
-  <div id="section12" className="section section3">
+  <div id="section12" className="section section12">
     <h1>Seção 12</h1>
     <p>Conteúdo da 12 seção.</p>
   </div>
 
-  <div id="section13" className="section section4">
+  <div id="section13" className="section section13">
     <h1>Seção 13</h1>
     <p>Conteúdo da 13 seção.</p>
-    <p> ISMAEL LINDO</p>
+    <p> ISMAEL cagão</p>
   </div>
   
 </div>
