@@ -196,15 +196,51 @@ p {
 }
 
 .section2 {
-  background-color: #D9C9C5; /* Cor secundária */
+  background-color: #D9C9C5;
 }
 
 .section3 {
-  background-color: #c8b2ad; /* Variante mais escura da cor secundária */
+  background-color: #c8b2ad;
 }
 
 .section4 {
-  background-color: #1E88E5; /* Cor de uma seção específica, pode ser ajustada */
+  background-color: #1E88E5;
+}
+
+.section5 {
+  background-color: #D9C9C5;
+}
+
+.section6 {
+  background-color: #c8b2ad;
+}
+
+.section7 {
+  background-color: #1E88E5;
+}
+
+.section8 {
+  background-color: #D9C9C5;
+}
+
+.section9 {
+  background-color: #c8b2ad;
+}
+
+.section10 {
+  background-color: #1E88E5;
+}
+
+.section11 {
+  background-color: #D9C9C5;
+}
+
+.section12 {
+  background-color: #c8b2ad;
+}
+
+.section13 {
+  background-color: #1E88E5;
 }
 
 .no-scroll {
