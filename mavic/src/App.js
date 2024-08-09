@@ -162,35 +162,35 @@ function App() {
           <img src="/Imagens_Seção_02/Imagem_Cadeira_01.png" alt="Imagem Cadeira 1" />
           <div className="circle-overlay"></div>
         </div>
-        <h2>Nome da Categoria</h2>
+        <h2>nome da categoria</h2>
       </div>
       <div className="slide-item">
         <div className="image-container">
           <img src="/Imagens_Seção_02/Imagem_Cadeira_02.png" alt="Imagem Cadeira 1" />
           <div className="circle-overlay"></div>
         </div>
-        <h2>Nome da Categoria</h2>
+        <h2>nome da categoria</h2>
       </div>
       <div className="slide-item">
         <div className="image-container">
           <img src="/Imagens_Seção_02/Imagem_Cadeira_03.png" alt="Imagem Cadeira 1" />
           <div className="circle-overlay"></div>
         </div>
-        <h2>Nome da Categoria</h2>
+        <h2>nome da categoria</h2>
       </div>
       <div className="slide-item">
         <div className="image-container">
           <img src="/Imagens_Seção_02/Imagem_Cadeira_04.png" alt="Imagem Cadeira 1" />
           <div className="circle-overlay"></div>
         </div>
-        <h2>Nome da Categoria</h2>
+        <h2>nome da categoria</h2>
       </div>
       <div className="slide-item">
         <div className="image-container">
           <img src="/Imagens_Seção_02/Imagem_Cadeira_05.png" alt="Imagem Cadeira 1" />
           <div className="circle-overlay"></div>
         </div>
-        <h2>Nome da Categoria</h2>
+        <h2>nome da categoria</h2>
       </div>
     </Slider>
   </div>
@@ -198,7 +198,7 @@ function App() {
 
 <div id="section3" className="section section3">
       <p>Em destaque</p>
-      <h1>Mais Vendidos</h1>
+      <h1>mais vendidos</h1>
       <div className="slider-container">
         <Slider {...sliderSettings}>
           <div className="slide-item">
@@ -254,6 +254,62 @@ function App() {
         </Slider>
       </div>
     </div>
+
+    <div id="section4" className="section section4">
+      <h1>Por que nos escolher?</h1>
+  <div className="content-wrapper">
+    <div className="left-column">
+      <div className="opcoes-numero">
+        <h1>01</h1>
+        <div className="titulo-e-descricao">
+          <h2>lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div className="opcoes-numero">
+        <h1>02</h1>
+        <div className="titulo-e-descricao">
+          <h2>lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div className="opcoes-numero">
+        <h1>03</h1>
+        <div className="titulo-e-descricao">
+          <h2>lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div className="opcoes-numero">
+        <h1>04</h1>
+        <div className="titulo-e-descricao">
+          <h2>lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div className="opcoes-numero">
+        <h1>05</h1>
+        <div className="titulo-e-descricao">
+          <h2>lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div className="opcoes-numero">
+        <h1>06</h1>
+        <div className="titulo-e-descricao">
+          <h2>lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <div className="right-column">
+      <img src="/Imagens_Seção_02/Imagem_Seção_04.png" alt="Descrição da imagem" />
+    </div>
+  </div>
+  </div>
+
+
+
 
     </div>
   );

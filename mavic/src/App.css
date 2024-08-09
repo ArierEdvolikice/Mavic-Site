@@ -4,15 +4,15 @@
 @font-face {
   font-family: 'Metropol';
   src: url('./Fontes/Metropol.ttf') format('truetype');
-  font-weight: normal;
   font-style: normal;
+  font-weight: 100;
 }
 
 .App {
   font-family: 'Metropol', sans-serif;
-  overflow-x: hidden; /* Evita rolagem horizontal */
+  overflow-x: hidden;
   position: relative;
-  background-color: #f2f2f2; /* Cor de fundo */
+  background-color: #f2f2f2;
 }
 
 p {
@@ -20,8 +20,13 @@ p {
   font-weight: 300;
 }
 
+h1 {
+  font-weight: 100;
+}
+
 h2{
   font-size: 20px;
+  font-weight: 100;
 }
 
 .overlay {
@@ -43,10 +48,10 @@ h2{
   padding: 0 42px;
   width: 100%;
   box-sizing: border-box;
-  color: #D9C9C5; /* Cor secundária */
+  color: #D9C9C5;
   position: absolute;
   top: 0;
-  z-index: 10; /* Garante que o cabeçalho esteja sobre os slides */
+  z-index: 10;
 }
 
 .menu-icon {
@@ -55,11 +60,11 @@ h2{
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
-  color: #D9C9C5; /* Cor secundária */
+  color: #D9C9C5;
 }
 
 .menu-icon:hover {
-  background-color: rgba(217, 201, 197, 0.2); /* Cor secundária com opacidade */
+  background-color: rgba(217, 201, 197, 0.2);
 }
 
 .logo {
@@ -90,22 +95,22 @@ h2{
   left: 0;
   width: 250px;
   height: 100vh;
-  background-color: #261914; /* Cor primária */
+  background-color: #261914;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Oculto inicialmente */
+  transform: translateX(-100%);
   z-index: 1500;
 }
 
 .sidebar.open {
-  transform: translateX(0); /* Aparece quando aberto */
+  transform: translateX(0);
 }
 
 .sidebar a {
-  color: #D9C9C5; /* Cor secundária */
+  color: #D9C9C5;
   text-decoration: none;
   font-size: 20px;
   margin: 10px 0;
@@ -113,7 +118,7 @@ h2{
 }
 
 .sidebar a:hover {
-  color: #f2f2f2; /* Cor de fundo ao pairar */
+  color: #f2f2f2;
 }
 
 .slide {
@@ -125,7 +130,7 @@ h2{
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* Efeito de fade */
+  transition: opacity 1s ease-in-out;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -159,7 +164,7 @@ h2{
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 100; /* Garante que a barra de controle esteja sobre os slides */
+  z-index: 100;
 }
 
 .dot {
@@ -179,13 +184,13 @@ h2{
 }
 
 .section {
-  height: 100vh; /* Ocupa 100% da altura da tela */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #261914; /* Cor primária */
-  padding: 25px;
+  color: #261914;
+  padding: 50px 50px;
 
 }
 
@@ -204,8 +209,9 @@ h2{
 
 .section2 {
   background-color: #f2f2f2;
-  height: 80vh; 
   overflow: hidden;
+  height: auto;
+  min-height: 70vh;
 }
 
 .slider-container {
@@ -220,7 +226,7 @@ h2{
   align-items: center;
   justify-content: center; 
   overflow: hidden; 
-  padding: 50px 0px;
+  padding: 5px;
   cursor:pointer;
 }
 
@@ -232,7 +238,7 @@ h2{
 
 .slide-item img {
   width: auto;
-  height: 300px;
+  height: 250px;
   transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;;
   position: relative;
   opacity: 0.7;
@@ -278,7 +284,7 @@ h2{
   height: 40px;
   z-index: 1;
   border-radius: 50%;
-  color: #261914; /* Cor do ícone das setas */
+  color: #261914;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,13 +301,14 @@ h2{
 .slick-prev:before, .slick-next:before {
   font-family: 'slick';
   font-size: 24px;
-  color: #261914; /* Cor do ícone das setas */
+  color: #261914;
   opacity: 1;
 }
 
 .section3 {
   background-color: #261914;
   color: #f2f2f2;
+  align-items: flex-start;
 }
 
 .section3 .slider-container {
@@ -329,6 +336,7 @@ h2{
   align-items: flex-start;
   justify-content: center;
   width: auto !important;
+  padding: 0px 0px
 }
 
 .section3 .image-container {
@@ -356,6 +364,12 @@ h2{
   transform: scale(1.1); 
 }
 
+.section3 h1 {
+  margin: 0;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
 .section3 h2 {
   font-size: 18px;
   margin-top: 10px;
@@ -371,10 +385,97 @@ h2{
   font-family: 'Montserrat', sans-serif;
   font-weight:lighter;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .section4 {
-  background-color: #1E88E5;
+  background-color: #f2f2f2;
+  justify-content: flex-start;
+  min-height: 100vh;
+  height: auto;
+}
+
+.section4 h1 {
+  text-align: center;
+  color: #261914;
+  font-size: 50px;
+}
+
+.section4 .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.section4 .left-column {
+  flex: 1 1;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: center;
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.opcoes-numero {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  height: 100px;
+}
+
+.opcoes-numero h1 {
+  font-size: 50px;
+  color: #261914;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.opcoes-numero h1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #D9C9C5;
+  border-radius: 50%;
+  transform: translate(-60%, -65%);
+  z-index: -1;
+}
+
+.titulo-e-descricao {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.titulo-e-descricao h2 {
+  font-size: 20px;
+  color: #261914; /* Cor do título na esquerda */
+  margin: 0;
+}
+
+.titulo-e-descricao p {
+  color: #261914; /* Cor da descrição */
+  margin-top: 8px;
+}
+
+.section4 .right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.section4 .right-column img {
+  max-width: 100%;
+  height: auto;
+  margin-right: -50px;
 }
 
 .section5 {
