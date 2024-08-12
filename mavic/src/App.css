@@ -573,6 +573,8 @@ h2 {
   border-radius: 15px;
   padding: 20px;
   position: relative;
+  height: auto;
+  min-height: 100vh;
 }
 
 .section8 .content-wrapper {
@@ -581,9 +583,11 @@ h2 {
   align-items: center;
   border-radius: 20px;
   background-color: #261914;
-  height: 80vh;
+  height: 90vh;
   width: 95%;
   justify-content: space-around;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .section8 .centered {

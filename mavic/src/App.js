@@ -472,13 +472,16 @@ function App() {
 </div>
 
 <div id="section8" className="section section8">
+  <div className="logo-container">
+    <img src="/Imagens/logo-place-holder.png" alt="Logomarca" className="logo" />
+  </div>
   <div className="content-wrapper">
     <div className="image-container centered">
       <img src="/Imagens/Imagem_Seção_08.png" alt="Imagem" className="overflow-image" />
     </div>
     <div className="coluna-direita-texto">
       <div className="servico">
-        <h2>nossos serviços</h2>
+        <h2>Nossos Serviços</h2>
         <h3>01 Manutenção Mobiliário Corporativo</h3>
         <p>
           • Manutenção corretiva e preventiva em cadeiras de escritório<br />
@@ -503,6 +506,7 @@ function App() {
     </div>
   </div>
 </div>
+
 
 
 
