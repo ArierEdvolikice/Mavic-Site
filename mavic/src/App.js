@@ -3,6 +3,7 @@ import './App.css';
 import imagemFundo01 from './Imagens/Imagem_Fundo_01.jpg';
 import imagemFundo02 from './Imagens/Imagem_Fundo_02.jpg';
 import imagemFundo03 from './Imagens/Imagem_Fundo_03.jpg';
+import logoServ from './Imagens/logo_serv.png'
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -143,40 +144,47 @@ function App() {
 
   <div id="section7" className="section section4">
     <h1>Seção 7</h1>
-    <p>Conteúdo da setima seção.</p>
-    <p> ERICK DOENTE</p>
+    <p>Modular - (D3)</p>
   </div>
 
   <div id="section8" className="section section2">
-    <h1>Seção 8</h1>
-    <p>Conteúdo da oitava seção.</p>
+    <img className='logoMavicServ' src={logoServ}></img>
+    <div className='sessao8Sub'>
+      <div className='width50%'>
+      <img className='logoMavicServ' src={logoServ}></img>
+
+
+      </div>
+      <div className='width50%'>
+        <h1> Nossos Serviços </h1>
+
+      </div>
+    </div>
   </div>
 
   <div id="section9" className="section section3">
     <h1>Seção 9</h1>
-    <p>Conteúdo da nona seção</p>
+    <p>Clientes e Vídeo - (D1)</p>
   </div>
 
   <div id="section10" className="section section4">
     <h1>Seção 10</h1>
-    <p>Conteúdo da quarta seção.</p>
-    <p> ERICK DOENTE</p>
+    <p>Clientes e Vídeo - (D1)</p>
   </div>
 
   <div id="section11" className="section section2">
     <h1>Seção 11</h1>
-    <p>Conteúdo da décima primeira.</p>
+    <p>Testimoniais - (D2)</p>
   </div>
 
   <div id="section12" className="section section3">
     <h1>Seção 12</h1>
-    <p>Conteúdo da 12 seção.</p>
+    <p>Postagens recentes - (D3) - PLUGIN ou ID</p>
   </div>
 
   <div id="section13" className="section section4">
     <h1>Seção 13</h1>
-    <p>Conteúdo da 13 seção.</p>
-    <p> ISMAEL LINDO</p>
+    <p>Footer</p>
   </div>
   
 </div>
