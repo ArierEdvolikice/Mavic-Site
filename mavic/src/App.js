@@ -121,6 +121,7 @@ function App() {
   return (
     <div className="App">
       {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
+
       <div className="section section1">
         <div className="header">
           <div className="menu-icon" onClick={toggleMenu}>
@@ -386,6 +387,7 @@ function App() {
           </div>
         </div>
       </div>
+
       <div id="section5" className="section section5">
         <div className="columns-wrapper">
           <div className="column column-1">
@@ -460,6 +462,71 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div id='section6' className='section section6'>
+
+      </div>
+
+      <div id='section7' className='section section7'>
+
+</div>
+
+<div id="section8" className="section section8">
+  <div className="content-wrapper">
+    <div className="image-container centered">
+      <img src="/Imagens/Imagem_Seção_08.png" alt="Imagem" className="overflow-image" />
+    </div>
+    <div className="coluna-direita-texto">
+      <div className="servico">
+        <h2>nossos serviços</h2>
+        <h3>01 Manutenção Mobiliário Corporativo</h3>
+        <p>
+          • Manutenção corretiva e preventiva em cadeiras de escritório<br />
+          • Troca de peças<br />
+          • Lavagem a seco<br />
+          • Soldagem<br />
+          • Pintura<br />
+          • Estofamentos em tecido ou couro sintético.
+        </p>
+      </div>
+      <div className="servico">
+        <h3>02 Manutenção Mobiliário Corporativo</h3>
+        <p>
+          • Manutenção corretiva e preventiva em cadeiras de escritório<br />
+          • Troca de peças<br />
+          • Lavagem a seco<br />
+          • Soldagem<br />
+          • Pintura<br />
+          • Estofamentos em tecido ou couro sintético.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id='section9' className='section section9'>
+
+</div>
+
+<div id='section10' className='section section10'>
+
+</div>
+
+<div id='section11' className='section section11'>
+
+</div>
+
+<div id='section12' className='section section12'>
+
+</div>
+
+<div id='section13' className='section section13'>
+
+</div>
+
     </div>
   );
 }
