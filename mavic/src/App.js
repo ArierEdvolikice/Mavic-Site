@@ -493,16 +493,17 @@ function App() {
         </p>
       </div>
       <div className="servico">
-        <h3>02 Manutenção Mobiliário Corporativo</h3>
-        <p>
-          • Manutenção corretiva e preventiva em cadeiras de escritório<br />
-          • Troca de peças<br />
-          • Lavagem a seco<br />
-          • Soldagem<br />
-          • Pintura<br />
-          • Estofamentos em tecido ou couro sintético.
-        </p>
-      </div>
+  <h3>02 Venda de Mobiliário Corporativo</h3>
+  <p>
+    • Cadeiras para diversos ambientes: Office, Coletivo e Colaborativo<br />
+    • Mesas retas, de reunião, estações de trabalho<br />
+    • Roupeiros de aço<br />
+    • Armários<br />
+  </p>
+</div>
+<div className="contact-button">
+            <button onClick={() => alert("Contato")}>contate-nos</button>
+          </div>
     </div>
   </div>
 </div>
