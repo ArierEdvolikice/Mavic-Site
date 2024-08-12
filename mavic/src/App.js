@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import imagemFundo01 from "./Imagens/Imagem_Fundo_01.jpg";
-import imagemFundo02 from "./Imagens/Imagem_Fundo_02.jpg";
-import imagemFundo03 from "./Imagens/Imagem_Fundo_03.jpg";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import imagemFundo01 from './Imagens/Imagem_Fundo_01.jpg';
+import imagemFundo02 from './Imagens/Imagem_Fundo_02.jpg';
+import imagemFundo03 from './Imagens/Imagem_Fundo_03.jpg';
+import logoServ from './Imagens/logo_serv.png'
+import imagem_sessao8 from './Imagens/sesao8.png'
 import Slider from "react-slick";
 
 function App() {
