@@ -1,210 +1,190 @@
-/* src/App.css */
-
-@font-face {
-  font-family: 'Metropol';
-  src: url('./Fontes/Metropol.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+ @font-face {
+     font-family: 'Metropol';
+     src: url('./Fontes/Metropol.ttf') format('truetype');
+     font-style: normal;
+     font-weight: 100;
 }
-
-.App {
-  font-family: 'Metropol', sans-serif;
-  overflow-x: hidden; /* Evita rolagem horizontal */
-  position: relative;
-  background-color: #f2f2f2; /* Cor de fundo */
+ .App {
+     font-family: 'Metropol', sans-serif;
+     overflow-x: hidden;
+     position: relative;
+     background-color: #f2f2f2;
 }
-
-p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+ p {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 300;
 }
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-  transition: backdrop-filter 0.3s ease;
+ h1 {
+     font-weight: 100;
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 42px;
-  width: 100%;
-  box-sizing: border-box;
-  color: #D9C9C5; /* Cor secundária */
-  position: absolute;
-  top: 0;
-  z-index: 10; /* Garante que o cabeçalho esteja sobre os slides */
+ h2{
+     font-size: 20px;
+     font-weight: 100;
 }
-
-.menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  color: #D9C9C5; /* Cor secundária */
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(5px);
+     z-index: 1000;
+     transition: backdrop-filter 0.3s ease;
 }
-
-.menu-icon:hover {
-  background-color: rgba(217, 201, 197, 0.2); /* Cor secundária com opacidade */
+ .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 42px;
+     width: 100%;
+     box-sizing: border-box;
+     color: #D9C9C5;
+     position: absolute;
+     top: 0;
+     z-index: 10;
 }
-
-.logo {
-  flex-grow: 1;
-  text-align: center;
+ .menu-icon {
+     font-size: 30px;
+     cursor: pointer;
+     padding: 10px;
+     border-radius: 5px;
+     transition: background-color 0.3s;
+     color: #D9C9C5;
 }
-
-.contact-button button {
-  background-color: transparent;
-  font-family: 'Metropol', sans-serif;
-  color: #f2f2f2;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border: 1px solid #f2f2f2;
-  border-radius: 50px;
+ .menu-icon:hover {
+     background-color: rgba(217, 201, 197, 0.2);
 }
-
-.contact-button button:hover {
-  background-color: #c8b2ad;
-  border: 1px solid #c8b2ad;
+ .logo {
+     flex-grow: 1;
+     text-align: center;
 }
-
-.sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: #261914; /* Cor primária */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Oculto inicialmente */
-  z-index: 1500;
+ .contact-button button {
+     background-color: transparent;
+     font-family: 'Metropol', sans-serif;
+     color: #f2f2f2;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     border: 1px solid #f2f2f2;
+     border-radius: 50px;
 }
-
-.sidebar.open {
-  transform: translateX(0); /* Aparece quando aberto */
+ .contact-button button:hover {
+     background-color: #c8b2ad;
+     border: 1px solid #c8b2ad;
 }
-
-.sidebar a {
-  color: #D9C9C5; /* Cor secundária */
-  text-decoration: none;
-  font-size: 20px;
-  margin: 10px 0;
-  transition: color 0.3s;
+ .sidebar {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 250px;
+     height: 100vh;
+     background-color: #261914;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     transition: transform 0.3s ease;
+     transform: translateX(-100%);
+     z-index: 1500;
 }
-
-.sidebar a:hover {
-  color: #f2f2f2; /* Cor de fundo ao pairar */
+ .sidebar.open {
+     transform: translateX(0);
 }
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out; /* Efeito de fade */
-  z-index: 0;
-  display: flex;
-  align-items: center;
+ .sidebar a {
+     color: #D9C9C5;
+     text-decoration: none;
+     font-size: 20px;
+     margin: 10px 0;
+     transition: color 0.3s;
 }
-
-.slide.active {
-  opacity: 1;
-  z-index: 1;
+ .sidebar a:hover {
+     color: #f2f2f2;
 }
-
-.slide-content {
-  position: relative;
-  z-index: 10;
-  text-align: left;
-  color: #f2f2f2;
-  padding-left: 50px;
-  padding-right: 40%;
-  padding-top: 5%;
-  line-height: 0.9;
+ .slide {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     background-position: center;
+     opacity: 0;
+     transition: opacity 1s ease-in-out;
+     z-index: 0;
+     display: flex;
+     align-items: center;
 }
-
-.slide-content h2{
-  font-size: 80px;
-  margin: 0;
+ .slide.active {
+     opacity: 1;
+     z-index: 1;
 }
-
-.slide-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 100; /* Garante que a barra de controle esteja sobre os slides */
+ .slide-content {
+     position: relative;
+     z-index: 10;
+     text-align: left;
+     color: #f2f2f2;
+     padding-left: 50px;
+     padding-right: 40%;
+     padding-top: 5%;
+     line-height: 0.9;
 }
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
+ .slide-content h2{
+     font-size: 80px;
+     margin: 0;
 }
-
-.dot.active {
-  background-color: rgba(255, 255, 255, 1);
-  width: 15px;
-  height: 15px;
-  margin-top: -3px;
+ .slide-controls {
+     position: absolute;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+     gap: 10px;
+     z-index: 100;
 }
-
-.section {
-  height: 100vh; /* Ocupa 100% da altura da tela */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #261914; /* Cor primária */
+ .dot {
+     width: 10px;
+     height: 10px;
+     background-color: rgba(255, 255, 255, 0.5);
+     border-radius: 50%;
+     cursor: pointer;
+     transition: background-color 0.3s;
 }
-
-.section1 {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente o conteúdo */
-  color: #261914; /* Cor primária */
-  text-align: left;
-  box-sizing: border-box;
-  position: relative;
+ .dot.active {
+     background-color: rgba(255, 255, 255, 1);
+     width: 15px;
+     height: 15px;
+     margin-top: -3px;
 }
-
-.section2 {
-  background-color: #D9C9C5; /* Cor secundária */
+ .section {
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #261914;
+     padding: 50px 50px;
 }
-
-.section3 {
-  background-color: #c8b2ad; /* Variante mais escura da cor secundária */
+ .section1 {
+     background-size: cover;
+     background-position: center;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     color: #261914;
+     text-align: left;
+     box-sizing: border-box;
+     position: relative;
 }
-
-.section4 {
-  background-color: #1E88E5; /* Cor de uma seção específica, pode ser ajustada */
+ .section2 {
+     background-color: #f2f2f2;
+     overflow: hidden;
+     height: auto;
+     min-height: 70vh;
 }
 .section8{
   margin-top: 40px;
