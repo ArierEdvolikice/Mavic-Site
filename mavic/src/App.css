@@ -517,6 +517,8 @@ h2 {
 
 .section5 .column .top-text h2 {
   font-size: 50px;
+  -webkit-text-stroke: 1px #f2f2f2;
+  color: transparent;
 }
 
 .section5 .column .bottom-text {
@@ -536,12 +538,25 @@ h2 {
 .section5 .column .bottom-text h2,
 .section5 .column .bottom-text p {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateY(0px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .section5 .column:hover .bottom-text h2,
 .section5 .column:hover .bottom-text p {
   opacity: 1;
+  transform: translateY(20px);
+}
+.section5 .column:hover .bottom-text h2,
+.section5 .column:hover .bottom-text p {
+  opacity: 1;
+  -webkit-text-stroke: none;
+  color: #f2f2f2;
+}
+
+.section5 .column:hover .top-text h2  {
+  opacity: 1;
+  color: #f2f2f2 !important;
 }
 
 .section6 {
