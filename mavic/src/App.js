@@ -382,10 +382,7 @@ function App() {
             </div>
           </div>
           <div className="right-column">
-            <img
-              src="/Imagens/Imagem_Seção_04.png"
-              alt="Descrição da imagem"
-            />
+            <img src="/Imagens/Imagem_Seção_04.png" alt="Descrição da imagem" />
           </div>
         </div>
       </div>
@@ -398,7 +395,10 @@ function App() {
               </div>
               <div className="bottom-text">
                 <h2>Título</h2>
-                <p>Título e descrição.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
               </div>
             </div>
           </div>
@@ -409,7 +409,10 @@ function App() {
               </div>
               <div className="bottom-text">
                 <h2>Título</h2>
-                <p>Título e descrição.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
               </div>
             </div>
           </div>
@@ -420,7 +423,10 @@ function App() {
               </div>
               <div className="bottom-text">
                 <h2>Título</h2>
-                <p>Título e descrição.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
               </div>
             </div>
           </div>
@@ -431,7 +437,10 @@ function App() {
               </div>
               <div className="bottom-text">
                 <h2>Título</h2>
-                <p>Título e descrição.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
               </div>
             </div>
           </div>
@@ -442,73 +451,15 @@ function App() {
               </div>
               <div className="bottom-text">
                 <h2>Título</h2>
-                <p>Título e descrição.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div id="section6" className="section section3">
-        <h1>Seção 6</h1>
-        <p>Conteúdo da terceira seção.</p>
-      </div>
-
-      <div id="section7" className="section section4">
-        <h1>Seção 7</h1>
-        <p>Modular - (D3)</p>
-      </div>
-
-      <div id="section8" className="section section8">
-        <img className='logoMavicServ' src={logoServ}></img>
-        <div className='sessao8Sub'>
-          <div className='sub1Secao8'>
-            <img src={imagem_sessao8} style={{ width: '50%' }}></img>
-
-          </div>
-          <div className='sub2Secao8'>
-            <h1> Nossos Serviços </h1>
-            <p>01 - manutenção - mobiliário corporativo</p>
-            <p>• Manutenção corretiva e preventiva em cadeiras de escritório
-              <br /> • Troca de peças
-              <br />• Lavagem a seco
-              <br />• Soldagem
-              <br />• Pintura
-              <br />• Estofamentos em tecido ou couro sintético.</p>
-            <p>02 - venda - mobiliário corporativo</p>
-            <p>• Cadeiras para diversos ambientes: Office, Coletivo e Colaborativo
-              <br />• Mesas retas, de reunião, estações de trabalho
-              <br />• Roupeiros de aço
-              <br />• Armários</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="section9" className="section section3">
-        <h1>Seção 9</h1>
-        <p>Clientes e Vídeo - (D1)</p>
-      </div>
-
-      <div id="section10" className="section section4">
-        <h1>Seção 10</h1>
-        <p>Clientes e Vídeo - (D1)</p>
-      </div>
-
-      <div id="section11" className="section section2">
-        <h1>Seção 11</h1>
-        <p>Testimoniais - (D2)</p>
-      </div>
-
-      <div id="section12" className="section section3">
-        <h1>Seção 12</h1>
-        <p>Postagens recentes - (D3) - PLUGIN ou ID</p>
-      </div>
-
-      <div id="section13" className="section section4">
-        <h1>Seção 13</h1>
-        <p>Footer</p>
-      </div>
-
     </div>
   );
 }
