@@ -380,75 +380,84 @@ function App() {
             </div>
           </div>
           <div className="right-column">
-            <img
-              src="/Imagens/Imagem_Seção_04.png"
-              alt="Descrição da imagem"
-            />
+            <img src="/Imagens/Imagem_Seção_04.png" alt="Descrição da imagem" />
           </div>
         </div>
       </div>
       <div id="section5" className="section section5">
-  <div className="columns-wrapper">
-    <div className="column column-1">
-      <div className="content">
-        <div className="top-text">
-          <h2>01</h2>
-        </div>
-        <div className="bottom-text">
-        <h2>Título</h2>
-        <p>Título e descrição.</p>
+        <div className="columns-wrapper">
+          <div className="column column-1">
+            <div className="content">
+              <div className="top-text">
+                <h2>01</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-2">
+            <div className="content">
+              <div className="top-text">
+                <h2>02</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-3">
+            <div className="content">
+              <div className="top-text">
+                <h2>03</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-4">
+            <div className="content">
+              <div className="top-text">
+                <h2>04</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-5">
+            <div className="content">
+              <div className="top-text">
+                <h2>05</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="column column-2">
-      <div className="content">
-        <div className="top-text">
-          <h2>02</h2>
-        </div>
-        <div className="bottom-text">
-        <h2>Título</h2>
-        <p>Título e descrição.</p>
-        </div>
-      </div>
-    </div>
-    <div className="column column-3">
-      <div className="content">
-        <div className="top-text">
-          <h2>03</h2>
-        </div>
-        <div className="bottom-text">
-        <h2>Título</h2>
-        <p>Título e descrição.</p>
-        </div>
-      </div>
-    </div>
-    <div className="column column-4">
-      <div className="content">
-        <div className="top-text">
-          <h2>04</h2>
-        </div>
-        <div className="bottom-text">
-        <h2>Título</h2>
-        <p>Título e descrição.</p>
-        </div>
-      </div>
-    </div>
-    <div className="column column-5">
-      <div className="content">
-        <div className="top-text">
-          <h2>05</h2>
-        </div>
-        <div className="bottom-text">
-          <h2>Título</h2>
-          <p>Título e descrição.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
     </div>
   );
 }
