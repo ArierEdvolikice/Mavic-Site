@@ -317,92 +317,149 @@ function App() {
       </div>
 
       <div id="section4" className="section section4">
-        <h1>nossas marcas</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <div className="logo-container">
-          <img src={logoServ} alt="Logo Serv" />
+        <h1>por que nos escolher?</h1>
+        <div className="content-wrapper">
+          <div className="left-column">
+            <div className="opcoes-numero">
+              <h1>01</h1>
+              <div className="titulo-e-descricao">
+                <h2>lorem ipsum dolor</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div className="opcoes-numero">
+              <h1>02</h1>
+              <div className="titulo-e-descricao">
+                <h2>lorem ipsum dolor</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div className="opcoes-numero">
+              <h1>03</h1>
+              <div className="titulo-e-descricao">
+                <h2>lorem ipsum dolor</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div className="opcoes-numero">
+              <h1>04</h1>
+              <div className="titulo-e-descricao">
+                <h2>lorem ipsum dolor</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div className="opcoes-numero">
+              <h1>05</h1>
+              <div className="titulo-e-descricao">
+                <h2>lorem ipsum dolor</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div className="opcoes-numero">
+              <h1>06</h1>
+              <div className="titulo-e-descricao">
+                <h2>lorem ipsum dolor</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="right-column">
+            <img src="/Imagens/Imagem_Seção_04.png" alt="Descrição da imagem" />
+          </div>
         </div>
       </div>
-
       <div id="section5" className="section section5">
-        <h1>qualidade e inovação</h1>
-        <div className="image-container">
-          <img src={imagem_sessao8} alt="Imagem Sessão 8" />
+        <div className="columns-wrapper">
+          <div className="column column-1">
+            <div className="content">
+              <div className="top-text">
+                <h2>01</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-2">
+            <div className="content">
+              <div className="top-text">
+                <h2>02</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-3">
+            <div className="content">
+              <div className="top-text">
+                <h2>03</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-4">
+            <div className="content">
+              <div className="top-text">
+                <h2>04</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="column column-5">
+            <div className="content">
+              <div className="top-text">
+                <h2>05</h2>
+              </div>
+              <div className="bottom-text">
+                <h2>Título</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="text-container">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <button>Saiba mais</button>
-        </div>
       </div>
-      <div id="section6" className="section section3">
-    <h1>Seção 6</h1>
-    <p>Conteúdo da terceira seção.</p>
-  </div>
-
-  <div id="section7" className="section section4">
-    <h1>Seção 7</h1>
-    <p>Modular - (D3)</p>
-  </div>
-
-  <div id="section8" className="section section8">
-    <img className='logoMavicServ' src={logoServ}></img>
-    <div className='sessao8Sub'>
-      <div  className='sub1Secao8'>
-      <img src={imagem_sessao8} style={{width: '50%'}}></img>
-
-      </div>
-      <div className='sub2Secao8'>
-        <h1> Nossos Serviços </h1>
-        <p>01 - manutenção - mobiliário corporativo</p>
-        <p>• Manutenção corretiva e preventiva em cadeiras de escritório
-          <br/> • Troca de peças 
-          <br/>• Lavagem a seco 
-          <br/>• Soldagem 
-          <br/>• Pintura 
-          <br/>• Estofamentos em tecido ou couro sintético.</p>
-          <p>02 - venda - mobiliário corporativo</p>
-          <p>• Cadeiras para diversos ambientes: Office, Coletivo e Colaborativo 
-          <br/>• Mesas retas, de reunião, estações de trabalho 
-          <br/>• Roupeiros de aço 
-          <br/>• Armários</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="section9" className="section section3">
-    <h1>Seção 9</h1>
-    <p>Clientes e Vídeo - (D1)</p>
-  </div>
-
-  <div id="section10" className="section section4">
-    <h1>Seção 10</h1>
-    <p>Clientes e Vídeo - (D1)</p>
-  </div>
-
-  <div id="section11" className="section section2">
-    <h1>Seção 11</h1>
-    <p>Testimoniais - (D2)</p>
-  </div>
-
-  <div id="section12" className="section section3">
-    <h1>Seção 12</h1>
-    <p>Postagens recentes - (D3) - PLUGIN ou ID</p>
-  </div>
-
-  <div id="section13" className="section section4">
-    <h1>Seção 13</h1>
-    <p>Footer</p>
-  </div>
     </div>
   );
 }
