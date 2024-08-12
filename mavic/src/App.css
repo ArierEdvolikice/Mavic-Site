@@ -206,6 +206,9 @@ p {
 .section4 {
   background-color: #1E88E5; /* Cor de uma seção específica, pode ser ajustada */
 }
+.section8{
+  margin-top: 40px;
+}
 
 .no-scroll {
   overflow: hidden;
@@ -214,16 +217,27 @@ p {
 .logoMavicServ{
   width: 689px;
 }
+
 .sessao8Sub{
   display: flex;
   flex-direction: row;
   background-color: #261914;
   border-radius: 50px;
-  height: 100%;
   color: #FFFFFF;
-  width: 100%
+  width: 100%;
+  padding-left: 80px;
+  justify-content: space-around;
+}
+.sub1Secao8{
+  display: block;
+  position: absolute;
+
+}
+.sub2Secao8{
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+
+
 }
 
-.width50{
-  width: 50%;
-}

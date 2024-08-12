@@ -4,6 +4,8 @@ import imagemFundo01 from './Imagens/Imagem_Fundo_01.jpg';
 import imagemFundo02 from './Imagens/Imagem_Fundo_02.jpg';
 import imagemFundo03 from './Imagens/Imagem_Fundo_03.jpg';
 import logoServ from './Imagens/logo_serv.png'
+import imagem_sessao8 from './Imagens/sesao8.png'
+
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -147,17 +149,27 @@ function App() {
     <p>Modular - (D3)</p>
   </div>
 
-  <div id="section8" className="section section2">
+  <div id="section8" className="section section8">
     <img className='logoMavicServ' src={logoServ}></img>
     <div className='sessao8Sub'>
-      <div className='width50%'>
-      <img className='logoMavicServ' src={logoServ}></img>
-
+      <div  className='sub1Secao8'>
+      <img src={imagem_sessao8} style={{width: '50%'}}></img>
 
       </div>
-      <div className='width50%'>
+      <div className='sub2Secao8'>
         <h1> Nossos Serviços </h1>
-
+        <p>01 - manutenção - mobiliário corporativo</p>
+        <p>• Manutenção corretiva e preventiva em cadeiras de escritório
+          <br/> • Troca de peças 
+          <br/>• Lavagem a seco 
+          <br/>• Soldagem 
+          <br/>• Pintura 
+          <br/>• Estofamentos em tecido ou couro sintético.</p>
+          <p>02 - venda - mobiliário corporativo</p>
+          <p>• Cadeiras para diversos ambientes: Office, Coletivo e Colaborativo 
+          <br/>• Mesas retas, de reunião, estações de trabalho 
+          <br/>• Roupeiros de aço 
+          <br/>• Armários</p>
       </div>
     </div>
   </div>
