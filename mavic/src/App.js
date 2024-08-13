@@ -4,12 +4,57 @@ import imagemFundo01 from "./Imagens/Imagem_Fundo_01.jpg";
 import imagemFundo02 from "./Imagens/Imagem_Fundo_02.jpg";
 import imagemFundo03 from "./Imagens/Imagem_Fundo_03.jpg";
 import logoServ from "./Imagens/logo_serv.png";
+import logoMavic from "./Imagens/logo mavic.png";
 import imagem_sessao8 from "./Imagens/sesao8.png";
 import Slider from "react-slick";
+import axios from 'axios';
+
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get(
+          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=YOUR_ACCESS_TOKEN`
+        );
+        setPosts(response.data.data);
+      } catch (error) {
+        console.error("Error fetching Instagram posts", error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+
+  const testimonials = [
+    {
+      image: "/path/to/photo1.jpg",
+      name: "John Doe",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      image: "/path/to/photo2.jpg",
+      name: "Jane Smith",
+      text: "Amazing experience, highly recommended!",
+    },
+    {
+      image: "/path/to/photo3.jpg",
+      name: "Michael Johnson",
+      text: "A fantastic company that provides great value.",
+    },
+    // Adicione mais testimonials aqui
+  ];
+  const brands = [
+    "/path/to/logo1.png",
+    "/path/to/logo2.png",
+    "/path/to/logo3.png",
+    // Adicione mais logos aqui
+  ];
 
   const slides = [
     {
@@ -74,6 +119,9 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
+
+
+
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -117,6 +165,74 @@ function App() {
       </button>
     ),
   };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  const settingsTestemunials = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+
+
 
   return (
     <div className="App">
@@ -470,7 +586,7 @@ function App() {
       <div id="section8" className="section section8">
         <div className="logo-container">
           <img
-            src="/Imagens/logo-place-holder.png"
+            src={logoServ}
             alt="Logomarca"
             className="logo"
           />
@@ -521,15 +637,112 @@ function App() {
         </div>
       </div>
 
-      <div id="section9" className="section section9"></div>
+      <div id="section9" className="section section9">
+        <h1>Nossos Parceiros</h1>
+        <Slider {...settings}>
+          {brands.map((logo, index) => (
+            <div key={index}>
+              <img src={logo} alt={`Logo ${index + 1}`} style={{ width: "100%", height: "auto" }} />
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-      <div id="section10" className="section section10"></div>
 
-      <div id="section11" className="section section11"></div>
+      <div id="section10" className="section10">
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/D0UnqGm_miA?si=VQp1_lPJo-tIik15&amp;controls=0"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="YouTube Video"
+          ></iframe>
+        </div>
+      </div>
 
-      <div id="section12" className="section section12"></div>
 
-      <div id="section13" className="section section13"></div>
+      <div id="section11" className="testimonials-carousel">
+        <Slider {...settingsTestemunials}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial">
+              <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+              <h3 className="testimonial-name">{testimonial.name}</h3>
+              <p className="testimonial-text">{testimonial.text}</p>
+            </div>
+          ))}
+        </Slider>
+
+      </div>
+
+      <div id="section12" className="section section12">
+        <div className="instagram-feed">
+          {posts.map((post) => (
+            <div key={post.id} className="instagram-post">
+              {post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM" ? (
+                <img src={post.media_url} alt={post.caption} />
+              ) : (
+                <video controls>
+                  <source src={post.media_url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+              <p>{post.caption}</p>
+              <a href={post.permalink} target="_blank" rel="noopener noreferrer">
+                View on Instagram
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      <div id="section13" className="section section13">
+        <p>Receba algumas de nossas novidades</p>
+
+        {/* Campo de input para nome */}
+        <input
+          type="text"
+          placeholder="Digite seu nome"
+          name="name"
+          className="input-name"
+        />
+
+        {/* Campo de input para email */}
+        <input
+          type="email"
+          placeholder="Digite seu email"
+          name="email"
+          className="input-email"
+        />
+
+        {/* Botão de envio */}
+        <button className="submit-button">Inscrever-se</button>
+
+        <div className="logo-container">
+          <img
+            src={logoMavic}
+            alt="Logomarca"
+            className="logo"
+          />
+        </div>
+        {/* Links */}
+        <div className="footer-links">
+          <a href="#">Lorem</a>
+          <a href="#">Lorem</a>
+          <a href="#">Lorem</a>
+          <a href="#">Lorem</a>
+          <a href="#">Lorem</a>
+        </div>
+        <div className="footer-info">
+          <p>@Criado por Mavic Conceito</p>
+          <p>Todos os direitos reservados</p>
+        </div>
+      </div>
+
+
     </div>
   );
 }
