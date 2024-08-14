@@ -627,9 +627,8 @@
      overflow: hidden;
 }
  @media (max-width: 768px) {
-     .section8 {
+     .section {
          padding: 10px;
-        /* Reduz o padding para telas menores */
     }
      .section8 .content-wrapper {
          flex-direction: column;
