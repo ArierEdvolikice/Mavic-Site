@@ -741,8 +741,6 @@ function App() {
           <p>Todos os direitos reservados</p>
         </div>
       </div>
-
-
     </div>
   );
 }
