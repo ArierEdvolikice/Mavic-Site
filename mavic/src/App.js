@@ -700,47 +700,63 @@ function App() {
 
 
       <div id="section13" className="section section13">
-        <p>Receba algumas de nossas novidades</p>
-
-        {/* Campo de input para nome */}
+  <div className="column column-left">
+    <div className="form-container">
+      <div className="form-title">
+        <p>Receba algumas de nossas novidades por e-mail</p>
+      </div>
+      <div className="form-fields">
         <input
           type="text"
           placeholder="Digite seu nome"
           name="name"
           className="input-name"
         />
-
-        {/* Campo de input para email */}
         <input
           type="email"
           placeholder="Digite seu email"
           name="email"
           className="input-email"
         />
-
-        {/* Botão de envio */}
         <button className="submit-button">Inscrever-se</button>
-
-        <div className="logo-container">
-          <img
-            src={logoMavic}
-            alt="Logomarca"
-            className="logo"
-          />
-        </div>
-        {/* Links */}
-        <div className="footer-links">
-          <a href="#">Lorem</a>
-          <a href="#">Lorem</a>
-          <a href="#">Lorem</a>
-          <a href="#">Lorem</a>
-          <a href="#">Lorem</a>
-        </div>
-        <div className="footer-info">
-          <p>@Criado por Mavic Conceito</p>
-          <p>Todos os direitos reservados</p>
-        </div>
       </div>
+    </div>
+
+    <div className="image-container">
+      <img
+        src="/Imagens/Imagem_Cadeira_01.png"
+        alt="Imagem Cadeira 1"
+        className="image-right"
+      />
+    </div>
+  </div>
+
+  <div className="column column-center">
+    <div className="logo-container">
+      <img
+        src={logoMavic}
+        alt="Logomarca"
+        className="logo"
+      />
+    </div>
+    <div className="social-icons">
+      <a href="#"><img src="icon_facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="icon_twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="icon_instagram.png" alt="Instagram" /></a>
+    </div>
+  </div>
+
+  <div className="column column-right">
+    <div className="footer-info">
+      <p>© Criado por Mavic Conceito</p>
+      <p>Todos os direitos reservados</p>
+    </div>
+  </div>
+</div>
+
+
+
+
     </div>
   );
 }
