@@ -620,7 +620,20 @@
      margin-top: 20px;
 }
  .section9 {
-     background-color: #c8b2ad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    gap: 20px;
+}
+.section9 .container{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px !important;
+    height: 300px !important;
+    align-items: center;
+    border-left: 1px solid grey ;
 }
  .section10 {
      background-color: #1e88e5;
