@@ -52,8 +52,8 @@ function App() {
     require("./Imagens/Maranello.png"),
     require("./Imagens/olisan.png"),
     require("./Imagens/plaxmetal.png"),
-    require("./Imagens/squadroni.png")
-
+    require("./Imagens/squadroni.png"),
+    require("./Imagens/Lady.jpg")
   ];
 
   const slides = [
@@ -166,13 +166,14 @@ function App() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 1000, // Aumenta a duração da transição para ser mais suave
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, // Define o autoplaySpeed para 0 para uma rotação contínua
+    autoplaySpeed: 1, // Define o autoplaySpeed para 0 para uma rotação contínua
     cssEase: "linear", // Faz a animação ser contínua, sem acelerações ou desacelerações
     arrows: false, // Remove as setas de navegação
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -692,11 +693,11 @@ function App() {
         </div>
       </div>
 
-      <div id="section9" className="section section9">
+      <div id="section9" className="section9">
         <h1>Nossos Parceiros</h1>
         <Slider {...settings} className="slider-container">
           {brands.map((logo, index) => (
-            <div key={index}>
+            <div key={index} className="container">
               <img src={logo} alt={`Logo ${index + 1}`} style={{ width: "100%", height: "auto" }} />
             </div>
           ))}
