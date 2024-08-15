@@ -19,7 +19,7 @@ function App() {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
-          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=YOUR_ACCESS_TOKEN`
+          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=IGQWROdEJJRTVPTEQxUUlfQ1lqUlFQQ2hvRmI3d1lCNUtiRVRhekFid3dGNEhFT2VaMWN0WmdqeGVWTERVOUpickh6UGlGVEVzQU9ZAeGdUNkcxUDdGYjVqeEhlSEFUSEFNU0stOC1fWUJyR3dyNnh5OXVOczZA6d00ZD`
         );
         setPosts(response.data.data);
       } catch (error) {
@@ -50,10 +50,12 @@ function App() {
     // Adicione mais testimonials aqui
   ];
   const brands = [
-    "/path/to/logo1.png",
-    "/path/to/logo2.png",
-    "/path/to/logo3.png",
-    // Adicione mais logos aqui
+    require("./Imagens/frisokar.png"),
+    require("./Imagens/Maranello.png"),
+    require("./Imagens/olisan.png"),
+    require("./Imagens/plaxmetal.png"),
+    require("./Imagens/squadroni.png")
+
   ];
 
   const slides = [
@@ -167,13 +169,15 @@ function App() {
   };
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000, // Aumenta a duração da transição para ser mais suave
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0, // Define o autoplaySpeed para 0 para uma rotação contínua
+    cssEase: "linear", // Faz a animação ser contínua, sem acelerações ou desacelerações
+    arrows: false, // Remove as setas de navegação
     responsive: [
       {
         breakpoint: 1024,
@@ -198,6 +202,7 @@ function App() {
       },
     ],
   };
+  
   const settingsTestemunials = {
     dots: true,
     infinite: true,
@@ -639,9 +644,9 @@ function App() {
 
       <div id="section9" className="section section9">
         <h1>Nossos Parceiros</h1>
-        <Slider {...settings}>
+        <Slider {...settings} className="slider-container">
           {brands.map((logo, index) => (
-            <div key={index}>
+            <div key={index} style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100px"}}>
               <img src={logo} alt={`Logo ${index + 1}`} style={{ width: "100%", height: "auto" }} />
             </div>
           ))}
@@ -678,7 +683,7 @@ function App() {
       </div>
 
       <div id="section12" className="section section12">
-        <div className="instagram-feed">
+        <Slider {...settings} className="slider-container">
           {posts.map((post) => (
             <div key={post.id} className="instagram-post">
               {post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM" ? (
@@ -695,68 +700,64 @@ function App() {
               </a>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
 
       <div id="section13" className="section section13">
-  <div className="column column-left">
-    <div className="form-container">
-      <div className="form-title">
-        <p>Receba algumas de nossas novidades por e-mail</p>
+        <div className="column column-left">
+          <div className="form-container">
+            <div className="form-title">
+              <p>Receba algumas de nossas novidades por e-mail</p>
+            </div>
+            <div className="form-fields">
+              <input
+                type="text"
+                placeholder="Digite seu nome"
+                name="name"
+                className="input-name"
+              />
+              <input
+                type="email"
+                placeholder="Digite seu email"
+                name="email"
+                className="input-email"
+              />
+              <button className="submit-button">Inscrever-se</button>
+            </div>
+          </div>
+
+          <div className="image-container">
+            <img
+              src="/Imagens/Imagem_Cadeira_01.png"
+              alt="Imagem Cadeira 1"
+              className="image-right"
+            />
+          </div>
+        </div>
+
+        <div className="column column-center">
+          <div className="logo-container">
+            <img
+              src={logoMavic}
+              alt="Logomarca"
+              className="logo"
+            />
+          </div>
+          <div className="social-icons">
+            <a href="#"><img src="icon_facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="icon_twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="icon_instagram.png" alt="Instagram" /></a>
+          </div>
+        </div>
+
+        <div className="column column-right">
+          <div className="footer-info">
+            <p>© Criado por Mavic Conceito</p>
+            <p>Todos os direitos reservados</p>
+          </div>
+        </div>
       </div>
-      <div className="form-fields">
-        <input
-          type="text"
-          placeholder="Digite seu nome"
-          name="name"
-          className="input-name"
-        />
-        <input
-          type="email"
-          placeholder="Digite seu email"
-          name="email"
-          className="input-email"
-        />
-        <button className="submit-button">Inscrever-se</button>
-      </div>
-    </div>
-
-    <div className="image-container">
-      <img
-        src="/Imagens/Imagem_Cadeira_01.png"
-        alt="Imagem Cadeira 1"
-        className="image-right"
-      />
-    </div>
-  </div>
-
-  <div className="column column-center">
-    <div className="logo-container">
-      <img
-        src={logoMavic}
-        alt="Logomarca"
-        className="logo"
-      />
-    </div>
-    <div className="social-icons">
-      <a href="#"><img src="icon_facebook.png" alt="Facebook" /></a>
-      <a href="#"><img src="icon_twitter.png" alt="Twitter" /></a>
-      <a href="#"><img src="icon_instagram.png" alt="Instagram" /></a>
-    </div>
-  </div>
-
-  <div className="column column-right">
-    <div className="footer-info">
-      <p>© Criado por Mavic Conceito</p>
-      <p>Todos os direitos reservados</p>
-    </div>
-  </div>
-</div>
-
-
-
-
     </div>
   );
 }
