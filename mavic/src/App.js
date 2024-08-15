@@ -206,7 +206,7 @@ function App() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     responsive: [
       {
@@ -755,8 +755,8 @@ function App() {
         </div>
       </div>
 
-      <div id="section11" className="testimonials-carousel">
-        <Slider {...settingsTestemunials}>
+      <div id="section11" className="section11" >
+        <Slider {...settingsTestemunials} className="testimonials-carousel">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial">
               <img
