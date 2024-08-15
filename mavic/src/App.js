@@ -7,8 +7,7 @@ import logoServ from "./Imagens/logo_serv.png";
 import logoMavic from "./Imagens/logo mavic.png";
 import imagem_sessao8 from "./Imagens/sesao8.png";
 import Slider from "react-slick";
-import axios from 'axios';
-
+import axios from "axios";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -29,7 +28,6 @@ function App() {
 
     fetchPosts();
   }, []);
-
 
   const testimonials = [
     {
@@ -119,9 +117,6 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
-
-
-
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -198,6 +193,7 @@ function App() {
       },
     ],
   };
+
   const settingsTestemunials = {
     dots: true,
     infinite: true,
@@ -232,7 +228,23 @@ function App() {
   };
 
 
-
+    // Configuração para o primeiro slider
+    const settingsPage1 = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+  
+    // Configuração para o segundo slider
+    const settingsPage2 = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
 
   return (
     <div className="App">
@@ -579,17 +591,92 @@ function App() {
         </div>
       </div>
 
-      <div id="section6" className="section section6"></div>
+      <div id="section6" className="section section6">
+      <h1>Galeria de Projetos</h1>
 
-      <div id="section7" className="section section7"></div>
+      {/* Slider 1 */}
+      <Slider {...settingsPage1} className="projects-page1">
+        <div className="project project-01">          
+          <h2>Projeto 01</h2>
+          <div className="project-content">
+            <div className="project-info">
+              <h3>Título do Projeto</h3>
+              <p>Descrição</p>
+              <button>Ver Projeto</button>
+            </div>
+            <div className="project-image">
+              <img
+                src="/Imagens/Imagem_Cadeira_01.png"
+                alt="Imagem do Projeto 01"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="project project-02">          
+          <h2>Projeto 02</h2>
+          <div className="project-content">
+            <div className="project-info">
+              <h3>Título do Projeto</h3>
+              <p>Descrição</p>
+              <button>Ver Projeto</button>
+            </div>
+            <div className="project-image">
+              <img
+                src="/Imagens/Imagem_Cadeira_01.png"
+                alt="Imagem do Projeto 01"
+              />
+            </div>
+          </div>
+        </div>
+
+
+      </Slider>
+
+      {/* Slider 2 */}
+      <Slider {...settingsPage2} className="projects-page2">
+        <div className="project project-03">          
+          <h2>Projeto 03</h2>
+          <div className="project-content">
+            <div className="project-info">
+              <h3>Título do Projeto</h3>
+              <p>Descrição</p>
+              <button>Ver Projeto</button>
+            </div>
+            <div className="project-image">
+              <img
+                src="/Imagens/Imagem_Cadeira_01.png"
+                alt="Imagem do Projeto 03"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="project project-04">          
+          <h2>Projeto 04</h2>
+          <div className="project-content">
+            <div className="project-info">
+              <h3>Título do Projeto 2</h3>
+              <p>Descrição</p>
+              <button>Ver Projeto</button>
+            </div>
+            <div className="project-image">
+              <img
+                src="/Imagens/Imagem_Cadeira_01.png"
+                alt="Imagem do Projeto 04"
+              />
+            </div>
+          </div>
+        </div>
+      </Slider>
+    </div>
+
+      <div id="section7" className="section section7">
+      </div>
 
       <div id="section8" className="section section8">
         <div className="logo-container">
-          <img
-            src={logoServ}
-            alt="Logomarca"
-            className="logo"
-          />
+          <img src={logoServ} alt="Logomarca" className="logo" />
         </div>
         <div className="content-wrapper">
           <div className="image-container centered">
@@ -642,12 +729,15 @@ function App() {
         <Slider {...settings}>
           {brands.map((logo, index) => (
             <div key={index}>
-              <img src={logo} alt={`Logo ${index + 1}`} style={{ width: "100%", height: "auto" }} />
+              <img
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                style={{ width: "100%", height: "auto" }}
+              />
             </div>
           ))}
         </Slider>
       </div>
-
 
       <div id="section10" className="section10">
         <div className="video-container">
@@ -663,25 +753,28 @@ function App() {
         </div>
       </div>
 
-
       <div id="section11" className="testimonials-carousel">
         <Slider {...settingsTestemunials}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial">
-              <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="testimonial-image"
+              />
               <h3 className="testimonial-name">{testimonial.name}</h3>
               <p className="testimonial-text">{testimonial.text}</p>
             </div>
           ))}
         </Slider>
-
       </div>
 
       <div id="section12" className="section section12">
         <div className="instagram-feed">
           {posts.map((post) => (
             <div key={post.id} className="instagram-post">
-              {post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM" ? (
+              {post.media_type === "IMAGE" ||
+              post.media_type === "CAROUSEL_ALBUM" ? (
                 <img src={post.media_url} alt={post.caption} />
               ) : (
                 <video controls>
@@ -690,7 +783,11 @@ function App() {
                 </video>
               )}
               <p>{post.caption}</p>
-              <a href={post.permalink} target="_blank" rel="noopener noreferrer">
+              <a
+                href={post.permalink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View on Instagram
               </a>
             </div>
@@ -698,65 +795,62 @@ function App() {
         </div>
       </div>
 
-
       <div id="section13" className="section section13">
-  <div className="column column-left">
-    <div className="form-container">
-      <div className="form-title">
-        <p>Receba algumas de nossas novidades por e-mail</p>
+        <div className="column column-left">
+          <div className="form-container">
+            <div className="form-title">
+              <p>Receba algumas de nossas novidades por e-mail</p>
+            </div>
+            <div className="form-fields">
+              <input
+                type="text"
+                placeholder="Digite seu nome"
+                name="name"
+                className="input-name"
+              />
+              <input
+                type="email"
+                placeholder="Digite seu email"
+                name="email"
+                className="input-email"
+              />
+              <button className="submit-button">Inscrever-se</button>
+            </div>
+          </div>
+
+          <div className="image-container">
+            <img
+              src="/Imagens/Imagem_Cadeira_01.png"
+              alt="Imagem Cadeira 1"
+              className="image-right"
+            />
+          </div>
+        </div>
+
+        <div className="column column-center">
+          <div className="logo-container">
+            <img src={logoMavic} alt="Logomarca" className="logo" />
+          </div>
+          <div className="social-icons">
+            <a href="#">
+              <img src="icon_facebook.png" alt="Facebook" />
+            </a>
+            <a href="#">
+              <img src="icon_twitter.png" alt="Twitter" />
+            </a>
+            <a href="#">
+              <img src="icon_instagram.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+
+        <div className="column column-right">
+          <div className="footer-info">
+            <p>© Criado por Mavic Conceito</p>
+            <p>Todos os direitos reservados</p>
+          </div>
+        </div>
       </div>
-      <div className="form-fields">
-        <input
-          type="text"
-          placeholder="Digite seu nome"
-          name="name"
-          className="input-name"
-        />
-        <input
-          type="email"
-          placeholder="Digite seu email"
-          name="email"
-          className="input-email"
-        />
-        <button className="submit-button">Inscrever-se</button>
-      </div>
-    </div>
-
-    <div className="image-container">
-      <img
-        src="/Imagens/Imagem_Cadeira_01.png"
-        alt="Imagem Cadeira 1"
-        className="image-right"
-      />
-    </div>
-  </div>
-
-  <div className="column column-center">
-    <div className="logo-container">
-      <img
-        src={logoMavic}
-        alt="Logomarca"
-        className="logo"
-      />
-    </div>
-    <div className="social-icons">
-      <a href="#"><img src="icon_facebook.png" alt="Facebook" /></a>
-      <a href="#"><img src="icon_twitter.png" alt="Twitter" /></a>
-      <a href="#"><img src="icon_instagram.png" alt="Instagram" /></a>
-    </div>
-  </div>
-
-  <div className="column column-right">
-    <div className="footer-info">
-      <p>© Criado por Mavic Conceito</p>
-      <p>Todos os direitos reservados</p>
-    </div>
-  </div>
-</div>
-
-
-
-
     </div>
   );
 }

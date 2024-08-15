@@ -544,7 +544,21 @@
 }
  .section6 {
      background-color: #c8b2ad;
+     height: auto;
 }
+
+.projects-page1, .projects-page2 {
+    margin: 0 auto;
+    width: 80%; /* Ajuste conforme necessário */
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
  .section7 {
      background-color: #1e88e5;
 }
@@ -555,6 +569,7 @@
 }
  .section8 .logo-container {
      margin-bottom: 20px;
+
 }
  .section8 .content-wrapper {
      display: flex;
