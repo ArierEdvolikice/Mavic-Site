@@ -166,7 +166,7 @@ function App() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000, // Aumenta a duração da transição para ser mais suave
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -233,17 +233,7 @@ function App() {
   };
 
 
-    // Configuração para o primeiro slider
     const settingsPage1 = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-  
-    // Configuração para o segundo slider
-    const settingsPage2 = {
       dots: true,
       infinite: true,
       speed: 500,
@@ -597,84 +587,57 @@ function App() {
       </div>
 
       <div id="section6" className="section section6">
-      <h1>Galeria de Projetos</h1>
+  <h1>Galeria de Projetos</h1>
 
-      {/* Slider 1 */}
-      <Slider {...settingsPage1} className="projects-page1">
-        <div className="project project-01">          
-          <h2>Projeto 01</h2>
-          <div className="project-content">
-            <div className="project-info">
-              <h3>Título do Projeto</h3>
-              <p>Descrição</p>
-              <button>Ver Projeto</button>
-            </div>
-            <div className="project-image">
-              <img
-                src="/Imagens/Imagem_Cadeira_01.png"
-                alt="Imagem do Projeto 01"
-              />
-            </div>
-          </div>
+  {/* Slider 1 */}
+  <Slider {...settingsPage1} className="projects-page1">
+    <div className="project project-01">          
+      <div className="project-content">
+        <div className="project-info">
+          <h3>Título do Projeto</h3>
+          <p>Descrição</p>
+          <button>Ver Projeto</button>
         </div>
-
-        <div className="project project-02">          
-          <h2>Projeto 02</h2>
-          <div className="project-content">
-            <div className="project-info">
-              <h3>Título do Projeto</h3>
-              <p>Descrição</p>
-              <button>Ver Projeto</button>
-            </div>
-            <div className="project-image">
-              <img
-                src="/Imagens/Imagem_Cadeira_01.png"
-                alt="Imagem do Projeto 01"
-              />
-            </div>
-          </div>
+        <div className="project-image">
+          <img
+            src="/Imagens/Imagem_Cadeira_01.png"
+            alt="Imagem do Projeto 01"
+          />
         </div>
-
-
-      </Slider>
-
-      {/* Slider 2 */}
-      <Slider {...settingsPage2} className="projects-page2">
-        <div className="project project-03">          
-          <h2>Projeto 03</h2>
-          <div className="project-content">
-            <div className="project-info">
-              <h3>Título do Projeto</h3>
-              <p>Descrição</p>
-              <button>Ver Projeto</button>
-            </div>
-            <div className="project-image">
-              <img
-                src="/Imagens/Imagem_Cadeira_01.png"
-                alt="Imagem do Projeto 03"
-              />
-            </div>
-          </div>
+      </div>
+      <div className="project-content">
+        <div className="project-info">
+          <h3>Título do Projeto</h3>
+          <p>Descrição</p>
+          <button>Ver Projeto</button>
         </div>
-
-        <div className="project project-04">          
-          <h2>Projeto 04</h2>
-          <div className="project-content">
-            <div className="project-info">
-              <h3>Título do Projeto 2</h3>
-              <p>Descrição</p>
-              <button>Ver Projeto</button>
-            </div>
-            <div className="project-image">
-              <img
-                src="/Imagens/Imagem_Cadeira_01.png"
-                alt="Imagem do Projeto 04"
-              />
-            </div>
-          </div>
+        <div className="project-image">
+          <img
+            src="/Imagens/Imagem_Cadeira_01.png"
+            alt="Imagem do Projeto 02"
+          />
         </div>
-      </Slider>
+      </div>
     </div>
+
+    <div className="project project-02">          
+      <div className="project-content">
+        <div className="project-info">
+          <h3>Título do Projeto</h3>
+          <p>Descrição</p>
+          <button>Ver Projeto</button>
+        </div>
+        <div className="project-image">
+          <img
+            src="/Imagens/Imagem_Cadeira_01.png"
+            alt="Imagem do Projeto 02"
+          />
+        </div>
+      </div>
+    </div>
+  </Slider>
+</div>
+
 
       <div id="section7" className="section section7">
       </div>
