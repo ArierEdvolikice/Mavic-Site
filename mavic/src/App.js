@@ -246,7 +246,7 @@ function App() {
     <div className="App">
       {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
 
-      <div className="section section1">
+      <div id="section1" className="section section1">
         <div className="header">
           <div className="menu-icon" onClick={toggleMenu}>
             &#9776;
@@ -588,56 +588,108 @@ function App() {
       </div>
 
       <div id="section6" className="section section6">
-  <h1>Galeria de Projetos</h1>
+    <h1>Galeria de Projetos</h1>
 
-  {/* Slider 1 */}
-  <Slider {...settingsPage1} className="projects-page1">
-    <div className="project project-01">          
-      <div className="project-content">
-        <div className="project-info">
-          <h3>Título do Projeto</h3>
-          <p>Descrição</p>
-          <button>Ver Projeto</button>
+    {/* Slider 1 */}
+    <Slider {...settingsPage1} className="projects-page1">
+        <div className="project project-01">          
+            <div className="project-content">
+                <div className="project-info">
+                    <h1>Título do Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div className="contact-button">
+            <button>ver projeto</button>
+          </div>
+                </div>
+                <div className="project-image">
+                    <img
+                        src="/Imagens/Imagem_Projeto_01.png"
+                        alt="Imagem do Projeto 01"
+                    />
+                </div>
+            </div>
+            <div className="project-content reverse">
+                <div className="project-image">
+                    <img
+                        src="/Imagens/Imagem_Projeto_01-Reverse.png"
+                        alt="Imagem do Projeto 02"
+                    />
+                </div>
+                <div className="project-info">
+                    <h1>Título do Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div className="contact-button">
+            <button>ver projeto</button>
+          </div>
+                </div>
+            </div>
+            <div className="project-content">
+                <div className="project-info">
+                    <h1>Título do Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div className="contact-button">
+            <button>ver projeto</button>
+          </div>
+                </div>
+                <div className="project-image">
+                    <img
+                        src="/Imagens/Imagem_Projeto_01.png"
+                        alt="Imagem do Projeto 02"
+                    />
+                </div>
+            </div>
         </div>
-        <div className="project-image">
-          <img
-            src="/Imagens/Imagem_Cadeira_01.png"
-            alt="Imagem do Projeto 01"
-          />
-        </div>
-      </div>
-      <div className="project-content">
-        <div className="project-info">
-          <h3>Título do Projeto</h3>
-          <p>Descrição</p>
-          <button>Ver Projeto</button>
-        </div>
-        <div className="project-image">
-          <img
-            src="/Imagens/Imagem_Cadeira_01.png"
-            alt="Imagem do Projeto 02"
-          />
-        </div>
-      </div>
-    </div>
 
-    <div className="project project-02">          
-      <div className="project-content">
-        <div className="project-info">
-          <h3>Título do Projeto</h3>
-          <p>Descrição</p>
-          <button>Ver Projeto</button>
+        <div className="project project-02">          
+            <div className="project-content">
+                <div className="project-info">
+                <h1>Título do Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div className="contact-button">
+            <button>ver projeto</button>
+          </div>
+                </div>
+                <div className="project-image">
+                    <img
+                        src="/Imagens/Imagem_Projeto_01.png"
+                        alt="Imagem do Projeto 02"
+                    />
+                </div>
+            </div>
+            <div className="project-content reverse">
+                <div className="project-image">
+                    <img
+                        src="/Imagens/Imagem_Projeto_01-Reverse.png"
+                        alt="Imagem do Projeto 02"
+                    />
+                </div>
+                <div className="project-info">
+                    <h1>Título do Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div className="contact-button">
+            <button>ver projeto</button>
+          </div>
+                </div>
+            </div>
+            <div className="project-content">
+                <div className="project-info">
+                <h1>Título do Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div className="contact-button">
+            <button>ver projeto</button>
+          </div>
+                </div>
+                <div className="project-image">
+                    <img
+                        src="/Imagens/Imagem_Projeto_01.png"
+                        alt="Imagem do Projeto 02"
+                    />
+                </div>
+            </div>
         </div>
-        <div className="project-image">
-          <img
-            src="/Imagens/Imagem_Cadeira_01.png"
-            alt="Imagem do Projeto 02"
-          />
-        </div>
-      </div>
-    </div>
-  </Slider>
+    </Slider>
 </div>
+
 
 
       <div id="section7" className="section section7">
