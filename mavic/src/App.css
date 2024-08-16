@@ -928,19 +928,16 @@ h3 {
 }
 
 .section13 {
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     background-color: #261914;
-}
-
-.section13 .total-footer{
-    margin-top: -175px;
+    min-height: 120vh;
 }
 
 .section13 .column-left {
     display: flex;
     flex: 1;
     align-items: center;
+
 }
 
 .section13 .form-container {
@@ -985,17 +982,33 @@ h3 {
 
 .section13 .submit-button {
     padding: 12px 20px;
-    color: #f2f2f2;
+    color: #f2f2f2; /* Cor do texto e do ícone */
     border: #f2f2f2 solid 1px;
     font-family: "Montserrat", sans-serif;
     background-color: #261914;
     cursor: pointer;
     border-radius: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+.section13 .submit-button svg {
+    color: #f2f2f2; /* Cor inicial do ícone */
+    transition: color 0.3s ease; /* Transição suave */
 }
 
 .section13 .submit-button:hover {
     background-color: #D9C9C5;
+    color: #261914; /* Muda a cor do texto e do ícone no hover */
 }
+
+.section13 .submit-button:hover svg {
+    color: #261914; /* Muda a cor do ícone no hover */
+}
+
 
 .section13 .image-container {
     flex: 1;
@@ -1005,7 +1018,7 @@ h3 {
 }
 
 .section13 .image-right {
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
 }
@@ -1015,38 +1028,56 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    margin-top: 50px;
 }
 
 .section13 .column-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: right;
-    padding: 0 20px;
+
+    text-align: center;
+
 }
 
-.section13 .logo-container {
-    margin-bottom: 10px;
-}
-
-.section13 .social-icons img {
-    width: 30px;
-    margin: 0 5px;
+.section13 .footer-info{
+    color: #f2f2f2;
 }
 
 .section13 .footer-info p {
     margin: 0;
 }
 
+.section13 .logo-container {
+    margin: 0px;
+}
+
+.section13 .social-icons svg {
+    color: #261914;
+}
+
+.section13 .social-icons {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
 .section13 .social-icons a {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #261914; /* Cor do círculo */
+    border-radius: 50%; /* Torna o contêiner circular */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #D9C9C5;
 }
 
 .section13 .social-icons a:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); 
+    background-color: #D9C9C5; /* Muda a cor do círculo no hover */
 }
+
 
 
 

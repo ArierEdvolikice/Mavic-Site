@@ -8,14 +8,19 @@ import logoMavic from "./Imagens/logo mavic.png";
 import imagem_sessao8 from "./Imagens/sesao8.png";
 import Slider from "react-slick";
 import axios from "axios";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [posts, setPosts] = useState([]);
-
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -23,31 +28,30 @@ function App() {
         const response = await axios.get(
           `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=IGQWROdEJJRTVPTEQxUUlfQ1lqUlFQQ2hvRmI3d1lCNUtiRVRhekFid3dGNEhFT2VaMWN0WmdqeGVWTERVOUpickh6UGlGVEVzQU9ZAeGdUNkcxUDdGYjVqeEhlSEFUSEFNU0stOC1fWUJyR3dyNnh5OXVOczZA6d00ZD`
         );
-        console.log('API response:', response.data);
+        console.log("API response:", response.data);
         setPosts(response.data.data);
       } catch (error) {
         console.error("Error fetching Instagram posts:", error);
         console.log("API Error Response:", error.response);
       }
     };
-  
+
     fetchPosts();
   }, []);
-  
 
   const testimonials = [
     {
-      image:require("./Imagens/Lady.jpg"),
+      image: require("./Imagens/Lady.jpg"),
       name: "John Doe",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
-      image:require("./Imagens/frisokar.png"),
+      image: require("./Imagens/frisokar.png"),
       name: "Jane Smith",
       text: "Amazing experience, highly recommended!",
     },
     {
-      image:require("./Imagens/frisokar.png"),
+      image: require("./Imagens/frisokar.png"),
       name: "Michael Johnson",
       text: "A fantastic company that provides great value.",
     },
@@ -176,7 +180,7 @@ function App() {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    cssEase: "linear", 
+    cssEase: "linear",
     arrows: false,
     pauseOnHover: false,
     responsive: [
@@ -876,7 +880,7 @@ function App() {
         </div>
       </div>
 
-      <div id="section11" className="section section11" >
+      <div id="section11" className="section section11">
         <h1>testimonials</h1>
         <Slider {...settingsTestemunials} className="testimonials-carousel">
           {testimonials.map((testimonial, index) => (
@@ -923,62 +927,66 @@ function App() {
 
       <div id="section13" className="section section13">
         <div className="column total-footer">
-        <div className="column column-left">
-          <div className="form-container">
-            <div className="form-title">
-              <p>Receba algumas de nossas novidades por e-mail</p>
+          <div className="column column-left">
+            <div className="form-container">
+              <div className="form-title">
+                <p>Receba algumas de nossas novidades por e-mail</p>
+              </div>
+              <div className="form-fields">
+                <input
+                  type="text"
+                  placeholder="Digite seu nome"
+                  name="name"
+                  className="input-name"
+                />
+                <input
+                  type="email"
+                  placeholder="Digite seu email"
+                  name="email"
+                  className="input-email"
+                />
+                <button className="submit-button">
+                  <FontAwesomeIcon icon={faPaperPlane} />
+                </button>
+              </div>
             </div>
-            <div className="form-fields">
-              <input
-                type="text"
-                placeholder="Digite seu nome"
-                name="name"
-                className="input-name"
+
+            <div className="image-container">
+              <img
+                src="/Imagens/Cadeira_Footer.png"
+                alt="Imagem Cadeira 1"
+                className="image-right"
               />
-              <input
-                type="email"
-                placeholder="Digite seu email"
-                name="email"
-                className="input-email"
-              />
-              <button className="submit-button">Inscrever-se</button>
             </div>
           </div>
 
-          <div className="image-container">
-            <img
-              src="/Imagens/Cadeira_Footer.png"
-              alt="Imagem Cadeira 1"
-              className="image-right"
-            />
+          <div className="column column-center">
+            <div className="logo-container">
+              <img src={logoMavic} alt="Logomarca" className="logo" />
+            </div>
+            <div className="social-icons">
+              <a href="#">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+            </div>
+          </div>
+
+          <div className="column column-right">
+            <div className="footer-info">
+              <p>© Criado por Mavic Conceito</p>
+              <p>Todos os direitos reservados</p>
+            </div>
           </div>
         </div>
-
-        <div className="column column-center">
-          <div className="logo-container">
-            <img src={logoMavic} alt="Logomarca" className="logo" />
-          </div>
-          <div className="social-icons">
-  <a href="#">
-    <FontAwesomeIcon icon={faFacebookF} size="2x" color="#f2f2f2" />
-  </a>
-  <a href="#">
-    <FontAwesomeIcon icon={faTwitter} size="2x" color="#f2f2f2" />
-  </a>
-  <a href="#">
-    <FontAwesomeIcon icon={faInstagram} size="2x" color="#f2f2f2" />
-  </a>
-</div>
-        </div>
-
-        <div className="column column-right">
-          <div className="footer-info">
-            <p>© Criado por Mavic Conceito</p>
-            <p>Todos os direitos reservados</p>
-          </div>
-        </div>
-        </div>
-
       </div>
     </div>
   );
