@@ -632,34 +632,126 @@ h3 {
     opacity: 1;
     color: #f2f2f2 !important;
 }
-
-.section6 {
-    background-color: #c8b2ad;
-    height: auto;
+ .section6 {
+     background-color: #f2f2f2;
+     height: auto;
 }
 
-.projects-page1,
-.projects-page2 {
+.section6 h1 {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.section6 h2 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.section6 .projects-page1, .section6 .projects-page2 {
     margin: 0 auto;
-    width: 80%;
-    /* Ajuste conforme necessário */
-}
-
-.slick-slide {
+    width: 100%;
+  }
+  
+  .section6 .slick-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.section6 .project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-right: -150px;
+}
+
+.section6 .project-info {
+    background-color: rgba(38, 25, 30, 0.8);
+    padding: 25px;
+    min-height: 40vh;
+    width: 65vh;
+    align-content: center;
+    border-radius: 25px;
+    position: absolute;
+    color: #f2f2f2;
+}
+
+.section6 .project-image {
+    flex: 1;
+    text-align: right;
+}
+
+.section6 .project-image img {
+    max-width: 100%;
+    height: 100vh;
+}
+
+.section6 .project-content.reverse {
+    flex-direction: row-reverse;
+    margin-right: 0px;
+    margin-left: -150px;
+}
+
+.section6 .dots-container {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .section6 .slick-dots {
+    position: static;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+  
+  .section6 .dots-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none; /* Remove a marcação padrão dos itens da lista */
+  }
+  
+  .section6 .dot {
+    width: 30px;
+    height: 30px;
+    color: #f2f2f2; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9c9c5;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .section6 .slick-dots .slick-active .dot {
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+    margin-left: -5px;
+    color: #f2f2f2;
+    background-color: #261914;
+  }
+
+
 
 .section7 {
     background-color: #1e88e5;
 }
-
-.section8 {
-    background-color: #ffffff;
-    gap: 70px;
-    height: 120vh;
+ .section8 {
+     background-color: #f2f2f2;
+     gap: 70px;
+     height: 120vh;
 }
 
 .section8 .logo-container {
@@ -723,8 +815,7 @@ h3 {
     justify-content: center;
     margin-top: 20px;
 }
-
-.section9 {
+ .section9 {
     display: flex;
     flex-direction: column;
     align-items: center;

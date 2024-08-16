@@ -57,7 +57,7 @@ function App() {
     require("./Imagens/olisan.png"),
     require("./Imagens/plaxmetal.png"),
     require("./Imagens/squadroni.png"),
-    require("./Imagens/Lady.jpg")
+    require("./Imagens/Lady.jpg"),
   ];
 
   const slides = [
@@ -203,7 +203,6 @@ function App() {
     ],
   };
 
-  
   const settingsTestemunials = {
     dots: true,
     infinite: true,
@@ -237,20 +236,28 @@ function App() {
     ],
   };
 
-
-    const settingsPage1 = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
+  const settingsPage1 = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    appendDots: (dots) => (
+      <div className="dots-container">
+        <ul className="dots-list"> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i) => <div className="dot">{i + 1}</div>,
+  };
 
   return (
     <div className="App">
       {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
 
-      <div className="section section1">
+      <div id="section1" className="section section1">
         <div className="header">
           <div className="menu-icon" onClick={toggleMenu}>
             &#9776;
@@ -592,60 +599,202 @@ function App() {
       </div>
 
       <div id="section6" className="section section6">
-  <h1>Galeria de Projetos</h1>
+        <h1>galeria de projetos</h1>
 
-  {/* Slider 1 */}
-  <Slider {...settingsPage1} className="projects-page1">
-    <div className="project project-01">          
-      <div className="project-content">
-        <div className="project-info">
-          <h3>Título do Projeto</h3>
-          <p>Descrição</p>
-          <button>Ver Projeto</button>
-        </div>
-        <div className="project-image">
-          <img
-            src="/Imagens/Imagem_Cadeira_01.png"
-            alt="Imagem do Projeto 01"
-          />
-        </div>
-      </div>
-      <div className="project-content">
-        <div className="project-info">
-          <h3>Título do Projeto</h3>
-          <p>Descrição</p>
-          <button>Ver Projeto</button>
-        </div>
-        <div className="project-image">
-          <img
-            src="/Imagens/Imagem_Cadeira_01.png"
-            alt="Imagem do Projeto 02"
-          />
-        </div>
-      </div>
-    </div>
+        {/* Slider 1 */}
+        <Slider {...settingsPage1} className="projects-page1">
+          <div className="project project-01">
+            <div className="project-content">
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01.png"
+                  alt="Imagem do Projeto 01"
+                />
+              </div>
+            </div>
+            <div className="project-content reverse">
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01-Reverse.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+            </div>
+            <div className="project-content">
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+            </div>
+          </div>
 
-    <div className="project project-02">          
-      <div className="project-content">
-        <div className="project-info">
-          <h3>Título do Projeto</h3>
-          <p>Descrição</p>
-          <button>Ver Projeto</button>
-        </div>
-        <div className="project-image">
-          <img
-            src="/Imagens/Imagem_Cadeira_01.png"
-            alt="Imagem do Projeto 02"
-          />
-        </div>
-      </div>
-    </div>
-  </Slider>
-</div>
+          <div className="project project-02">
+            <div className="project-content">
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+            </div>
+            <div className="project-content reverse">
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01-Reverse.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+            </div>
+            <div className="project-content">
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+            </div>
+          </div>
 
-
-      <div id="section7" className="section section7">
+          <div className="project project-02">
+            <div className="project-content">
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+            </div>
+            <div className="project-content reverse">
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01-Reverse.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+            </div>
+            <div className="project-content">
+              <div className="project-info">
+                <h2>título do projeto</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="contact-button">
+                  <button>ver projeto</button>
+                </div>
+              </div>
+              <div className="project-image">
+                <img
+                  src="/Imagens/Imagem_Projeto_01.png"
+                  alt="Imagem do Projeto 02"
+                />
+              </div>
+            </div>
+          </div>
+        </Slider>
       </div>
+
+      <div id="section7" className="section section7"></div>
 
       <div id="section8" className="section section8">
         <div className="logo-container">
@@ -702,7 +851,11 @@ function App() {
         <Slider {...settings} className="slider-container">
           {brands.map((logo, index) => (
             <div key={index} className="container">
-              <img src={logo} alt={`Logo ${index + 1}`} style={{ width: "100%", height: "auto" }} />
+              <img
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                style={{ width: "100%", height: "auto" }}
+              />
             </div>
           ))}
         </Slider>
@@ -799,20 +952,22 @@ function App() {
           </div>
         </div>
 
-  <div className="column column-center">
-    <div className="logo-container">
-      <img
-        src={logoMavic}
-        alt="Logomarca"
-        className="logo"
-      />
-    </div>
-    <div className="social-icons">
-      <a href="#"><img src="icon_facebook.png" alt="Facebook" /></a>
-      <a href="#"><img src="icon_twitter.png" alt="Twitter" /></a>
-      <a href="#"><img src="icon_instagram.png" alt="Instagram" /></a>
-    </div>
-  </div>
+        <div className="column column-center">
+          <div className="logo-container">
+            <img src={logoMavic} alt="Logomarca" className="logo" />
+          </div>
+          <div className="social-icons">
+            <a href="#">
+              <img src="icon_facebook.png" alt="Facebook" />
+            </a>
+            <a href="#">
+              <img src="icon_twitter.png" alt="Twitter" />
+            </a>
+            <a href="#">
+              <img src="icon_instagram.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
 
         <div className="column column-right">
           <div className="footer-info">
