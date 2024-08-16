@@ -14,34 +14,38 @@ function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [posts, setPosts] = useState([]);
 
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
           `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=IGQWROdEJJRTVPTEQxUUlfQ1lqUlFQQ2hvRmI3d1lCNUtiRVRhekFid3dGNEhFT2VaMWN0WmdqeGVWTERVOUpickh6UGlGVEVzQU9ZAeGdUNkcxUDdGYjVqeEhlSEFUSEFNU0stOC1fWUJyR3dyNnh5OXVOczZA6d00ZD`
         );
+        console.log('API response:', response.data);
         setPosts(response.data.data);
       } catch (error) {
-        console.error("Error fetching Instagram posts", error);
+        console.error("Error fetching Instagram posts:", error);
+        console.log("API Error Response:", error.response);
       }
     };
-
+  
     fetchPosts();
   }, []);
+  
 
   const testimonials = [
     {
-      image: "/path/to/photo1.jpg",
+      image:require("./Imagens/Lady.jpg"),
       name: "John Doe",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
-      image: "/path/to/photo2.jpg",
+      image:require("./Imagens/frisokar.png"),
       name: "Jane Smith",
       text: "Amazing experience, highly recommended!",
     },
     {
-      image: "/path/to/photo3.jpg",
+      image:require("./Imagens/frisokar.png"),
       name: "Michael Johnson",
       text: "A fantastic company that provides great value.",
     },
@@ -719,6 +723,7 @@ function App() {
       </div>
 
       <div id="section11" className="section11" >
+        <h1>Testimonials</h1>
         <Slider {...settingsTestemunials} className="testimonials-carousel">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial">
@@ -734,7 +739,9 @@ function App() {
         </Slider>
       </div>
 
-      <div id="section12" className="section section12">
+      <div id="section12" className="section12">
+        <h1>Postagens Recentes</h1>
+        {console.log(posts)}
         <Slider {...settings} className="slider-container">
           {posts.map((post) => (
             <div key={post.id} className="instagram-post">
