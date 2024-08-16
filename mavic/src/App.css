@@ -507,7 +507,6 @@ h3 {
 .section5 .column {
     flex: 1;
     background-color: #d9c9c5;
-    /* Cor secundária */
     transition: flex 0.3s ease, background-color 0.3s ease;
     overflow: hidden;
     cursor: pointer;
@@ -925,38 +924,34 @@ h3 {
     height: 30vh;
     color: #F2F2F2;
     padding: 30px;
-}
-
-.instagram-post{
-    width: 300px;
-    height: 300px;
-    background-color: green;
+    margin-bottom: 350px;
 }
 
 .section13 {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    background-color: #261914;
+}
+
+.section13 .total-footer{
+    margin-top: -175px;
 }
 
 .section13 .column-left {
     display: flex;
     flex: 1;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .section13 .form-container {
-    flex: 1;
     margin-right: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .section13 .form-title p {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #261914;
+    font-weight: 100;
+    color: #f2f2f2;
 }
 
 .section13 .form-fields {
@@ -966,20 +961,20 @@ h3 {
 
 .section13 .input-name,
 .section13 .input-email {
+    font-family: "Montserrat", sans-serif;
     flex: 1;
-    padding: 12px 15px;
-    border: 2px solid #D9C9C5;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #261914;
+    padding: 20px 20px;
     background-color: #f2f2f2;
+    border: none;
+    border-radius: 50px;
     outline: none;
     transition: border-color 0.3s, background-color 0.3s;
+    width: 200px;
 }
 
 .section13 .input-name::placeholder,
 .section13 .input-email::placeholder {
-    color: #D9C9C5;
+    color: #261914;
 }
 
 .section13 .input-name:focus,
@@ -990,10 +985,12 @@ h3 {
 
 .section13 .submit-button {
     padding: 12px 20px;
+    color: #f2f2f2;
+    border: #f2f2f2 solid 1px;
+    font-family: "Montserrat", sans-serif;
     background-color: #261914;
-    border: none;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 
 .section13 .submit-button:hover {
@@ -1040,6 +1037,15 @@ h3 {
 
 .section13 .footer-info p {
     margin: 0;
+}
+
+.section13 .social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.section13 .social-icons a:hover {
+    transform: scale(1.2);
 }
 
 

@@ -8,6 +8,8 @@ import logoMavic from "./Imagens/logo mavic.png";
 import imagem_sessao8 from "./Imagens/sesao8.png";
 import Slider from "react-slick";
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -920,6 +922,7 @@ function App() {
       </div>
 
       <div id="section13" className="section section13">
+        <div className="column total-footer">
         <div className="column column-left">
           <div className="form-container">
             <div className="form-title">
@@ -944,7 +947,7 @@ function App() {
 
           <div className="image-container">
             <img
-              src="/Imagens/Imagem_Cadeira_01.png"
+              src="/Imagens/Cadeira_Footer.png"
               alt="Imagem Cadeira 1"
               className="image-right"
             />
@@ -956,16 +959,16 @@ function App() {
             <img src={logoMavic} alt="Logomarca" className="logo" />
           </div>
           <div className="social-icons">
-            <a href="#">
-              <img src="icon_facebook.png" alt="Facebook" />
-            </a>
-            <a href="#">
-              <img src="icon_twitter.png" alt="Twitter" />
-            </a>
-            <a href="#">
-              <img src="icon_instagram.png" alt="Instagram" />
-            </a>
-          </div>
+  <a href="#">
+    <FontAwesomeIcon icon={faFacebookF} size="2x" color="#f2f2f2" />
+  </a>
+  <a href="#">
+    <FontAwesomeIcon icon={faTwitter} size="2x" color="#f2f2f2" />
+  </a>
+  <a href="#">
+    <FontAwesomeIcon icon={faInstagram} size="2x" color="#f2f2f2" />
+  </a>
+</div>
         </div>
 
         <div className="column column-right">
@@ -974,6 +977,8 @@ function App() {
             <p>Todos os direitos reservados</p>
           </div>
         </div>
+        </div>
+
       </div>
     </div>
   );
