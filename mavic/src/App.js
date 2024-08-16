@@ -170,13 +170,12 @@ function App() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000, // Aumenta a duração da transição para ser mais suave
+    speed: 3000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1, // Define o autoplaySpeed para 0 para uma rotação contínua
-    cssEase: "linear", // Faz a animação ser contínua, sem acelerações ou desacelerações
-    arrows: false, // Remove as setas de navegação
+    cssEase: "linear", 
+    arrows: false,
     pauseOnHover: false,
     responsive: [
       {
@@ -238,7 +237,7 @@ function App() {
 
   const settingsPage1 = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -846,8 +845,8 @@ function App() {
         </div>
       </div>
 
-      <div id="section9" className="section9">
-        <h1>Nossos Parceiros</h1>
+      <div id="section9" className="section section9">
+        <h1>nossos parceiros</h1>
         <Slider {...settings} className="slider-container">
           {brands.map((logo, index) => (
             <div key={index} className="container">
@@ -861,7 +860,7 @@ function App() {
         </Slider>
       </div>
 
-      <div id="section10" className="section10">
+      <div id="section10" className="section section10">
         <div className="video-container">
           <iframe
             width="560"
@@ -875,8 +874,8 @@ function App() {
         </div>
       </div>
 
-      <div id="section11" className="section11" >
-        <h1>Testimonials</h1>
+      <div id="section11" className="section section11" >
+        <h1>testimonials</h1>
         <Slider {...settingsTestemunials} className="testimonials-carousel">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial">
@@ -892,7 +891,7 @@ function App() {
         </Slider>
       </div>
 
-      <div id="section12" className="section12">
+      <div id="section12" className="section section12">
         <h1>Postagens Recentes</h1>
         {console.log(posts)}
         <Slider {...settings} className="slider-container">
