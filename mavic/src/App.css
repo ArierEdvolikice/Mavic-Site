@@ -824,8 +824,10 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     gap: 50px;
     background-color: #d9c9c5;
+    padding: 50px 0;
 
 }
 
