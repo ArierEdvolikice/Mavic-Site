@@ -867,17 +867,15 @@ function App() {
       </div>
 
       <div id="section10" className="section section10">
-        <div className="video-container">
           <iframe
-            width="560"
-            height="315"
+            width="100%"
+            height="100%"
             src="https://www.youtube.com/embed/D0UnqGm_miA?si=VQp1_lPJo-tIik15&amp;controls=0"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="YouTube Video"
           ></iframe>
-        </div>
       </div>
 
       <div id="section11" className="section section11">
