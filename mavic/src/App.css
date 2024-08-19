@@ -930,7 +930,6 @@ h3 {
 .section13 {
     justify-content: flex-end;
     background-color: #261914;
-    min-height: 120vh;
 }
 
 .section13 .column-left {
@@ -1011,16 +1010,19 @@ h3 {
 
 
 .section13 .image-container {
-    flex: 1;
+    flex: 1 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 350px;
 }
 
 .section13 .image-right {
     max-width: 400px;
     height: auto;
     border-radius: 8px;
+    position: absolute;
+    margin-top: -250px;
 }
 
 .section13 .column-center {
