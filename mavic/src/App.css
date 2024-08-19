@@ -836,8 +836,8 @@ h3 {
     display: flex !important;
     flex-direction: column;
     justify-content: center;
-    width: 300px !important;
-    height: 300px !important;
+    width: 250px !important;
+    height: 250px !important;
     align-items: center;
 }
 
