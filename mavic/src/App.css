@@ -209,7 +209,7 @@ h3 {
 .section1 {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -405,7 +405,7 @@ h3 {
 .section4 {
     background-color: #f2f2f2;
     justify-content: flex-start;
-    min-height: 100vh;
+    min-height: 80vh;
     height: auto;
 }
 
@@ -511,7 +511,7 @@ h3 {
     overflow: hidden;
     cursor: pointer;
     text-align: center;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
