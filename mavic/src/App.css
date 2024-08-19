@@ -209,7 +209,7 @@ h3 {
 .section1 {
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -496,6 +496,7 @@ h3 {
 .section5 {
     background-color: #d9c9c5;
     padding: 0px;
+    height: 100vh;
 }
 
 .section5 .columns-wrapper {
