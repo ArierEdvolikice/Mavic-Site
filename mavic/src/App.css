@@ -512,7 +512,7 @@ h3 {
     overflow: hidden;
     cursor: pointer;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -563,7 +563,7 @@ h3 {
 }
 
 .section5 .column:hover {
-    flex: 1.2;
+    flex: 1.5;
     background-color: #261914;
 }
 
