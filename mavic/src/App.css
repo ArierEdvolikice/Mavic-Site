@@ -77,11 +77,13 @@ h3 {
 }
 
 .logo {
-    max-width: 450px;
-    flex-grow: 1;
+    max-width: 300px;
+    /* flex-grow: 1; */
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-
 .contact-button button {
     background-color: transparent;
     font-family: "Metropol", sans-serif;
@@ -197,6 +199,7 @@ h3 {
 
 .section {
     height: 80vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,22 +296,15 @@ h3 {
 
 .slick-prev,
 .slick-next {
-    width: 40px;
-    height: 40px;
     z-index: 1;
-    border-radius: 50%;
-    color: #261914;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .slick-prev {
-    left: 10px;
+    left: 20px;
 }
 
 .slick-next {
-    right: 10px;
+    right: 20px;
 }
 
 .slick-prev:before,
@@ -352,25 +348,21 @@ h3 {
     width: auto !important;
     padding: 0px 0px;
 }
-
 .section3 .image-container {
     background-color: #f2f2f2;
-    width: 100%;
-    height: 450px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-radius: 25px;
+    padding: 20px;
 }
 
 .section3 .image-container img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
     width: auto;
     height: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
     opacity: 1;
 }
 
@@ -391,6 +383,7 @@ h3 {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     margin-bottom: 0;
+    text-align: left;
 }
 
 .section3 p {
@@ -543,23 +536,23 @@ h3 {
 }
 
 .section5 .column-1 {
-    background-image: url("../public/Imagens/Seção_05 (1).jpg");
+    background-image: url("../public/Imagens/Secao05_1.jpg");
 }
 
 .section5 .column-2 {
-    background-image: url("../public/Imagens/Seção_05 (2).jpg");
+    background-image: url("../public/Imagens/Secao05_2.jpg");
 }
 
 .section5 .column-3 {
-    background-image: url("../public/Imagens/Seção_05 (3).jpg");
+    background-image: url("../public/Imagens/Secao05_3.jpg");
 }
 
 .section5 .column-4 {
-    background-image: url("../public/Imagens/Seção_05 (4).jpg");
+    background-image: url("../public/Imagens/Secao05_4.jpg");
 }
 
 .section5 .column-5 {
-    background-image: url("../public/Imagens/Seção_05 (5).jpg");
+    background-image: url("../public/Imagens/Secao05_5.jpg");
 }
 
 .section5 .column:hover {
@@ -753,7 +746,7 @@ h3 {
  .section8 {
      background-color: #f2f2f2;
      gap: 70px;
-     height: 120vh;
+     height: auto;
      padding-bottom: 120px;
 }
 
@@ -770,7 +763,8 @@ h3 {
     background-color: #261914;
     width: 100%;
     justify-content: space-around;
-    height: 80vh;
+    height: auto;
+    padding: 25px 0px;
 }
 
 .section8 .image-container {
@@ -781,7 +775,9 @@ h3 {
 }
 
 .section8 .overflow-image {
-    height: 95vh;
+    height: auto;
+    max-width: 500px;
+    position: absolute;
 }
 
 .section8 .coluna-direita-texto {
@@ -820,7 +816,7 @@ h3 {
 }
 
  .section9 {
-    min-height: 50vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;

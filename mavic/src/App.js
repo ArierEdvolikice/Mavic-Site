@@ -523,7 +523,7 @@ function App() {
             </div>
           </div>
           <div className="right-column">
-            <img src="/Imagens/Imagem_Seção_04.png" alt="Descrição da imagem" />
+            <img src="/Imagens/ImagemSecao04.png" alt="Descrição da imagem" />
           </div>
         </div>
       </div>
@@ -808,7 +808,7 @@ function App() {
         <div className="content-wrapper">
           <div className="image-container centered">
             <img
-              src="/Imagens/Imagem_Seção_08.png"
+              src="/Imagens/ImagemSecao08.png"
               alt="Imagem"
               className="overflow-image"
             />
