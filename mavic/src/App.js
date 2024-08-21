@@ -809,26 +809,7 @@ function App() {
             </div>
           </div>
           <div className="bottom-section">
-            <div className="furniture">
-              <div className="furniture-overlay">
-                <div className="furniture-info">
-                  <div>
-                    <h2>peça 01</h2>
-                  </div>
-                  <div className="furniture-description">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="furniture lamp">
               <img
                 src="/Imagens/Imagem_Cadeira_Secao_07_03.png"
                 alt="Cadeira"
@@ -838,7 +819,7 @@ function App() {
               <div className="furniture-overlay">
                 <div className="furniture-info">
                   <div>
-                    <h2>peça 01</h2>
+                    <h2>Peça 02</h2>
                   </div>
                   <div className="furniture-description">
                     <p>
@@ -856,6 +837,12 @@ function App() {
               </div>
               <img
                 src="/Imagens/Imagem_Cadeira_Secao_07_02.png"
+                alt="Cadeira"
+              />
+            </div>
+            <div className="furniture tapete">
+              <img
+                src="/Imagens/Tapete.png"
                 alt="Cadeira"
               />
             </div>
