@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import imagemFundo01 from "./Imagens/Imagem_Fundo_01.jpg";
-import imagemFundo02 from "./Imagens/Imagem_Fundo_02.jpg";
-import imagemFundo03 from "./Imagens/Imagem_Fundo_03.jpg";
+import imagemFundo01 from "./Imagens/imagem12.jpg";
+import imagemFundo02 from "./Imagens/imagem2.png";
+import imagemFundo03 from "./Imagens/img3.png";
 import logoServ from "./Imagens/logo_serv.png";
 import logoMavic from "./Imagens/logo mavic.png";
 import imagem_sessao8 from "./Imagens/sesao8.png";
@@ -70,25 +70,25 @@ function App() {
     {
       image: `url(${imagemFundo01})`,
       text: {
-        title: "Lorem ipsum dolor sit amet",
+        title: "Criando espaços corporativos com excelência.",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Comprometidos com a excelência, criamos móveis que transformam seu escritório em um ambiente produtivo e elegante.",
       },
     },
     {
       image: `url(${imagemFundo02})`,
       text: {
-        title: "Duis aute irure dolor in reprehenderit",
+        title: "Transformando ambientes com qualidade e precisão.",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Na Mavic, cada detalhe é cuidadosamente planejado para transformar seu espaço colaborativo com móveis de alta qualidade e precisão no acabamento.",
       },
     },
     {
       image: `url(${imagemFundo03})`,
       text: {
-        title: "Excepteur sint occaecat cupidatat",
+        title: "Para nós, assistência é sinônimo de cuidado e atenção aos detalhes.",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Nossa equipe de assistência técnica está sempre pronta para oferecer soluções rápidas e precisas, garantindo que cada peça do seu mobiliário continue impecável e funcional, com a atenção e o cuidado que seu espaço merece.",
       },
     },
   ];
@@ -258,6 +258,12 @@ function App() {
     customPaging: (i) => <div className="dot">{i + 1}</div>,
   };
 
+  const redirectToWhatsApp = () => {
+    const message = "Olá, gostaria de mais informações sobre os serviços da Mavic."
+    const whatsappLink = `https://wa.me/558594198405?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
+  };
+
   return (
     <div className="App">
       {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
@@ -271,7 +277,7 @@ function App() {
             <h1>Mavic</h1>
           </div>
           <div className="contact-button">
-            <button onClick={() => alert("Contato")}>contate-nos</button>
+            <button onClick={redirectToWhatsApp}>contate-nos</button>
           </div>
         </div>
 
@@ -523,7 +529,7 @@ function App() {
             </div>
           </div>
           <div className="right-column">
-            <img src="/Imagens/ImagemSecao04.png" alt="Descrição da imagem" />
+            <img src={require("./Imagens/time.png")} alt="Descrição da imagem" />
           </div>
         </div>
       </div>
@@ -845,7 +851,7 @@ function App() {
               </p>
             </div>
             <div className="contact-button">
-              <button onClick={() => alert("Contato")}>contate-nos</button>
+              <button onClick={redirectToWhatsApp}>contate-nos</button>
             </div>
           </div>
         </div>

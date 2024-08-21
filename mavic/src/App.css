@@ -1063,6 +1063,49 @@ h3 {
     background-color: #D9C9C5; /* Muda a cor do círculo no hover */
 }
 
+.ambiente-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ambiente-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .mobilia-item {
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .descricao-hover {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+    text-align: center;
+  }
+  
+  .item-image {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .mobilia-item:hover .descricao-hover {
+    display: block;
+  }
+  
+
 
 
 
