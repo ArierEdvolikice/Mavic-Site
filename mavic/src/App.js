@@ -258,6 +258,40 @@ function App() {
     customPaging: (i) => <div className="dot">{i + 1}</div>,
   };
 
+  const [popupInfo, setPopupInfo] = useState('');
+  const [popupStyle, setPopupStyle] = useState({});
+
+  const handleMouseEnter = (e) => {
+    const info = e.currentTarget.getAttribute('data-info');
+    setPopupInfo(info);
+    // Inicialmente posiciona o popup próximo ao cursor
+    setPopupStyle({
+      display: 'block',
+      top: `${e.clientY}px`, // 10px de margem inferior
+      left: `${e.clientX}px`, // 10px de margem lateral
+    });
+  };
+
+  const handleMouseMove = (e) => {
+    if (popupInfo) {
+      // Atualiza a posição do popup com base na posição do cursor
+      setPopupStyle((prevStyle) => ({
+        ...prevStyle,
+        top: `${e.clientY}px`,
+        left: `${e.clientX}px`,
+      }));
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setPopupInfo('');
+    setPopupStyle({ display: 'none' });
+  };
+
+  
+
+  
+
   return (
     <div className="App">
       {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
@@ -799,7 +833,48 @@ function App() {
         </Slider>
       </div>
 
-      <div id="section7" className="section section7"></div>
+      <div id="section7" className="section section7">
+  <h1>Ambiente Modular</h1>
+  <div className="room">
+    <div className="top-section">
+      <div className="lamp-container">
+        <img src="/Imagens/Secao07_Fundo_02_Lamp.png" alt="Nova Imagem" />
+        <div className="light-effect"></div>
+      </div>
+    </div>
+    <div className="bottom-section">
+      <div className="furniture">
+        <div className="furniture-overlay">
+          <div className="furniture-info">
+            <div><h2>peça 01</h2></div>
+            <div className="furniture-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+        </div>
+        <img src="/Imagens/Cadeira_Footer.png" alt="Cadeira" />
+      </div>
+      <div className="furniture">
+        <div className="furniture-overlay">
+          <div className="furniture-info">
+            <div><h2>peça 02</h2></div>
+            <div className="furniture-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor...</p>
+            </div>
+          </div>
+        </div>
+        <img src="/Imagens/Cadeira_Footer.png" alt="Mesa" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
       <div id="section8" className="section section8">
         <div className="logo-container">
