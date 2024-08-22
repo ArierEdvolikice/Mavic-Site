@@ -93,46 +93,82 @@ function App() {
     },
   ];
 
-  const mobilia = [
+  const maisVendidos = [
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/bit.png"),
       name: "Cadeira Bit",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/Addit.png"),
       name: "Cadeira Addit",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/goah.png"),
+      name: "Cadeira Goah",
+    },
+    {
+      image: require("./Imagens/prime.png"),
       name: "Poltrona Prime",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/mesaR.png"),
+      name: "Mesa reta",
+    },
+
+  ]
+
+  const mobilia = [
+    {
+      image: require("./Imagens/bit.png"),
+      name: "Cadeira Bit",
+    },
+    {
+      image: require("./Imagens/Addit.png"),
+      name: "Cadeira Addit",
+    },
+    {
+      image: require("./Imagens/prime.png"),
+      name: "Poltrona Prime",
+    },
+    {
+      image: require("./Imagens/gamer.png"),
       name: "Cadeira Gamer Vizon DZ",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/Pix.png"),
       name: "Poltrona Pix",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/mesa.png"),
       name: "Mesa de Reunião Retangular",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/banqueta.png"),
+      name: "Banqueta Bit",
+    },
+    {
+      image: require("./Imagens/estacao.png"),
       name: "Estação de Trabalho",
     },
     {
-      image: require("./Imagens/frisokar.png"),
-      name: "Banqueta Satz",
-    },
-    {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/connect.png"),
       name: "Cadeira Connect",
     },
     {
-      image: require("./Imagens/frisokar.png"),
+      image: require("./Imagens/levoo.png"),
       name: "Puff Levoo",
+    },
+    {
+      image: require("./Imagens/sofa.png"),
+      name: "Sofá Pix Individual",
+    },
+    {
+      image: require("./Imagens/armarioAlto.png"),
+      name: "Armário Alto",
+    },
+    {
+      image: require("./Imagens/armarioBaico.png"),
+      name: "Armário Baixo",
     }
   ]
 
@@ -444,56 +480,19 @@ function App() {
         <h1>mais vendidos</h1>
         <div className="slider-container">
           <Slider {...sliderSettings}>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_01.png"
-                  alt="Imagem Cadeira 1"
-                />
+            {maisVendidos.map((item, index) => (
+              <div className="slide-item" key={index}>
+
+                <div className="image-container">
+                 <img
+                    src={item.image}
+                    alt="Imagem Cadeira 1"
+                  />
+                </div>
+                <h2>{item.name}</h2>
+                <p>{item.descricao}</p>
               </div>
-              <h2>Nome da Categoria</h2>
-              <p>Descrição do produto</p>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_02.png"
-                  alt="Imagem Cadeira 2"
-                />
-              </div>
-              <h2>Nome da Categoria</h2>
-              <p>Descrição do produto</p>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_03.png"
-                  alt="Imagem Cadeira 3"
-                />
-              </div>
-              <h2>Nome da Categoria</h2>
-              <p>Descrição do produto</p>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_04.png"
-                  alt="Imagem Cadeira 4"
-                />
-              </div>
-              <h2>Nome da Categoria</h2>
-              <p>Descrição do produto</p>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_05.png"
-                  alt="Imagem Cadeira 5"
-                />
-              </div>
-              <h2>Nome da Categoria</h2>
-              <p>Descrição do produto</p>
-            </div>
+            ))}
           </Slider>
         </div>
       </div>
@@ -876,12 +875,6 @@ function App() {
           </div>
         </div>
       </div>
-
-
-
-
-
-
 
       <div id="section8" className="section section8">
         <div className="logo-container">
