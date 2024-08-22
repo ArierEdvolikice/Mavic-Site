@@ -93,6 +93,49 @@ function App() {
     },
   ];
 
+  const mobilia = [
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Cadeira Bit",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Cadeira Addit",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Poltrona Prime",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Cadeira Gamer Vizon DZ",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Poltrona Pix",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Mesa de Reunião Retangular",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Estação de Trabalho",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Banqueta Satz",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Cadeira Connect",
+    },
+    {
+      image: require("./Imagens/frisokar.png"),
+      name: "Puff Levoo",
+    }
+  ]
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -288,10 +331,6 @@ function App() {
     setPopupStyle({ display: 'none' });
   };
 
-  
-
-  
-
   const redirectToWhatsApp = () => {
     const message = "Olá, gostaria de mais informações sobre os serviços da Mavic."
     const whatsappLink = `https://wa.me/558594198405?text=${encodeURIComponent(message)}`;
@@ -384,56 +423,18 @@ function App() {
       <div id="section2" className="section section2">
         <div className="slider-container">
           <Slider {...sliderSettings}>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_01.png"
-                  alt="Imagem Cadeira 1"
-                />
-                <div className="circle-overlay"></div>
+            {mobilia.map((item, index) => (
+              <div className="slide-item" key={index}>
+                <div className="image-container">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                  />
+                  <div className="circle-overlay"></div>
+                </div>
+                <h2>{item.name}</h2>
               </div>
-              <h2>nome da categoria</h2>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_02.png"
-                  alt="Imagem Cadeira 2"
-                />
-                <div className="circle-overlay"></div>
-              </div>
-              <h2>nome da categoria</h2>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_03.png"
-                  alt="Imagem Cadeira 3"
-                />
-                <div className="circle-overlay"></div>
-              </div>
-              <h2>nome da categoria</h2>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_04.png"
-                  alt="Imagem Cadeira 4"
-                />
-                <div className="circle-overlay"></div>
-              </div>
-              <h2>nome da categoria</h2>
-            </div>
-            <div className="slide-item">
-              <div className="image-container">
-                <img
-                  src="/Imagens/Imagem_Cadeira_05.png"
-                  alt="Imagem Cadeira 5"
-                />
-                <div className="circle-overlay"></div>
-              </div>
-              <h2>nome da categoria</h2>
-            </div>
+            ))}
           </Slider>
         </div>
       </div>
@@ -840,41 +841,41 @@ function App() {
       </div>
 
       <div id="section7" className="section section7">
-  <h1>Ambiente Modular</h1>
-  <div className="room">
-    <div className="top-section">
-      <div className="lamp-container">
-        <img src="/Imagens/Secao07_Fundo_02_Lamp.png" alt="Nova Imagem" />
-        <div className="light-effect"></div>
-      </div>
-    </div>
-    <div className="bottom-section">
-      <div className="furniture">
-        <div className="furniture-overlay">
-          <div className="furniture-info">
-            <div><h2>peça 01</h2></div>
-            <div className="furniture-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h1>Ambiente Modular</h1>
+        <div className="room">
+          <div className="top-section">
+            <div className="lamp-container">
+              <img src="/Imagens/Secao07_Fundo_02_Lamp.png" alt="Nova Imagem" />
+              <div className="light-effect"></div>
+            </div>
+          </div>
+          <div className="bottom-section">
+            <div className="furniture">
+              <div className="furniture-overlay">
+                <div className="furniture-info">
+                  <div><h2>peça 01</h2></div>
+                  <div className="furniture-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+                </div>
+              </div>
+              <img src="/Imagens/Cadeira_Footer.png" alt="Cadeira" />
+            </div>
+            <div className="furniture">
+              <div className="furniture-overlay">
+                <div className="furniture-info">
+                  <div><h2>peça 02</h2></div>
+                  <div className="furniture-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor...</p>
+                  </div>
+                </div>
+              </div>
+              <img src="/Imagens/Cadeira_Footer.png" alt="Mesa" />
             </div>
           </div>
         </div>
-        <img src="/Imagens/Cadeira_Footer.png" alt="Cadeira" />
       </div>
-      <div className="furniture">
-        <div className="furniture-overlay">
-          <div className="furniture-info">
-            <div><h2>peça 02</h2></div>
-            <div className="furniture-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor...</p>
-            </div>
-          </div>
-        </div>
-        <img src="/Imagens/Cadeira_Footer.png" alt="Mesa" />
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -948,15 +949,15 @@ function App() {
       </div>
 
       <div id="section10" className="section section10">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/D0UnqGm_miA?si=VQp1_lPJo-tIik15&amp;controls=0"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="YouTube Video"
-          ></iframe>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/D0UnqGm_miA?si=VQp1_lPJo-tIik15&amp;controls=0"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="YouTube Video"
+        ></iframe>
       </div>
 
       <div id="section11" className="section section11">
@@ -983,7 +984,7 @@ function App() {
           {posts.map((post) => (
             <div key={post.id} className="instagram-post">
               {post.media_type === "IMAGE" ||
-              post.media_type === "CAROUSEL_ALBUM" ? (
+                post.media_type === "CAROUSEL_ALBUM" ? (
                 <img src={post.media_url} alt={post.caption} />
               ) : (
                 <video controls>
