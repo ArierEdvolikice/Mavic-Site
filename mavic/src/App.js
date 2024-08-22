@@ -5,7 +5,6 @@ import imagemFundo02 from "./Imagens/imagem2.png";
 import imagemFundo03 from "./Imagens/img3.png";
 import logoServ from "./Imagens/logo_serv.png";
 import logoMavic from "./Imagens/logo mavic.png";
-import imagem_sessao8 from "./Imagens/sesao8.png";
 import Slider from "react-slick";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,6 +56,7 @@ function App() {
     },
     // Adicione mais testimonials aqui
   ];
+
   const brands = [
     require("./Imagens/frisokar.png"),
     require("./Imagens/Maranello.png"),
@@ -86,7 +86,8 @@ function App() {
     {
       image: `url(${imagemFundo03})`,
       text: {
-        title: "Para nós, assistência é sinônimo de cuidado e atenção aos detalhes.",
+        title:
+          "Para nós, assistência é sinônimo de cuidado e atenção aos detalhes.",
         description:
           "Nossa equipe de assistência técnica está sempre pronta para oferecer soluções rápidas e precisas, garantindo que cada peça do seu mobiliário continue impecável e funcional, com a atenção e o cuidado que seu espaço merece.",
       },
@@ -337,40 +338,30 @@ function App() {
     customPaging: (i) => <div className="dot">{i + 1}</div>,
   };
 
-  const [popupInfo, setPopupInfo] = useState('');
-  const [popupStyle, setPopupStyle] = useState({});
-
-  const handleMouseEnter = (e) => {
-    const info = e.currentTarget.getAttribute('data-info');
-    setPopupInfo(info);
-    // Inicialmente posiciona o popup próximo ao cursor
-    setPopupStyle({
-      display: 'block',
-      top: `${e.clientY}px`, // 10px de margem inferior
-      left: `${e.clientX}px`, // 10px de margem lateral
-    });
+  const settingsModular = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    afterChange: (current) => {
+      setRoomName(current === 0 ? "Room 1" : "Room 2");
+    },
   };
 
-  const handleMouseMove = (e) => {
-    if (popupInfo) {
-      // Atualiza a posição do popup com base na posição do cursor
-      setPopupStyle((prevStyle) => ({
-        ...prevStyle,
-        top: `${e.clientY}px`,
-        left: `${e.clientX}px`,
-      }));
-    }
-  };
-
+  const [roomName, setRoomName] = useState("Room 1");
   const handleMouseLeave = () => {
     setPopupInfo('');
     setPopupStyle({ display: 'none' });
   };
 
   const redirectToWhatsApp = () => {
-    const message = "Olá, gostaria de mais informações sobre os serviços da Mavic."
-    const whatsappLink = `https://wa.me/558594198405?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
+    const message =
+      "Olá, gostaria de mais informações sobre os serviços da Mavic.";
+    const whatsappLink = `https://wa.me/558594198405?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappLink, "_blank");
   };
 
   return (
@@ -563,7 +554,10 @@ function App() {
             </div>
           </div>
           <div className="right-column">
-            <img src={require("./Imagens/time.png")} alt="Descrição da imagem" />
+            <img
+              src={require("./Imagens/time.png")}
+              alt="Descrição da imagem"
+            />
           </div>
         </div>
       </div>
@@ -841,39 +835,128 @@ function App() {
 
       <div id="section7" className="section section7">
         <h1>Ambiente Modular</h1>
-        <div className="room">
-          <div className="top-section">
-            <div className="lamp-container">
-              <img src="/Imagens/Secao07_Fundo_02_Lamp.png" alt="Nova Imagem" />
-              <div className="light-effect"></div>
+        <p>Nome do Ambiente: {roomName}</p>
+        <Slider {...settingsModular}>
+          {/* Primeira Room */}
+          <div className="room">
+            <div className="top-section">
+              <div className="lamp-container">
+                <img
+                  src="/Imagens/Secao07_Fundo_02_Lamp.png"
+                  alt="Nova Imagem"
+                />
+                <div className="light-effect"></div>
+              </div>
             </div>
-          </div>
-          <div className="bottom-section">
-            <div className="furniture">
-              <div className="furniture-overlay">
-                <div className="furniture-info">
-                  <div><h2>peça 01</h2></div>
-                  <div className="furniture-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div className="bottom-section">
+              <div className="furniture">
+                <div className="furniture-overlay">
+                  <div className="furniture-info">
+                    <div>
+                      <h2>Peça 01</h2>
+                    </div>
+                    <div className="furniture-description">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <img
+                  src="/Imagens/Imagem_Cadeira_Secao_07_02.png"
+                  alt="Cadeira"
+                />
               </div>
-              <img src="/Imagens/Cadeira_Footer.png" alt="Cadeira" />
-            </div>
-            <div className="furniture">
-              <div className="furniture-overlay">
-                <div className="furniture-info">
-                  <div><h2>peça 02</h2></div>
-                  <div className="furniture-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor...</p>
+              <div className="furniture tapete">
+                <img src="/Imagens/Tapete.png" alt="Tapete" />
+              </div>
+              <div className="furniture">
+                <div className="furniture-overlay">
+                  <div className="furniture-info">
+                    <div>
+                      <h2>Peça 02</h2>
+                    </div>
+                    <div className="furniture-description">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent auctor...
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <img src="/Imagens/Imagem_Cadeira_Secao_07.png" alt="Mesa" />
               </div>
-              <img src="/Imagens/Cadeira_Footer.png" alt="Mesa" />
             </div>
           </div>
-        </div>
+
+          {/* Segunda Room */}
+          <div className="room-2">
+            <div className="top-section">
+              <div className="lamp-container">
+                <img
+                  src="/Imagens/Secao07_Fundo_02_Lamp.png"
+                  alt="Nova Imagem"
+                />
+                <div className="light-effect"></div>
+              </div>
+            </div>
+            <div className="bottom-section">
+              <div className="furniture">
+                <div className="furniture-overlay">
+                  <div className="furniture-info">
+                    <div>
+                      <h2>Peça 03</h2>
+                    </div>
+                    <div className="furniture-description">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="/Imagens/Imagem_Cadeira_Secao_07_03.png"
+                  alt="Cadeira"
+                />
+              </div>
+              <div className="furniture tapete">
+                <img src="/Imagens/Tapete.png" alt="Tapete" />
+              </div>
+              <div className="furniture">
+                <div className="furniture-overlay">
+                  <div className="furniture-info">
+                    <div>
+                      <h2>Peça 04</h2>
+                    </div>
+                    <div className="furniture-description">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent auctor...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <img src="/Imagens/Imagem_Cadeira_Secao_07.png" alt="Mesa" />
+              </div>
+            </div>
+          </div>
+        </Slider>
       </div>
 
       <div id="section8" className="section section8">

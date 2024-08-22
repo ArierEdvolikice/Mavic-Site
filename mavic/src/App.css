@@ -751,66 +751,71 @@ h3 {
     color: #f2f2f2;
     background-color: #261914;
   }
-
-
-
+  
   .section7 {
-    height: auto;
+    height: 120vh;
     position: relative;
-    padding: 0;
+
   }
 
-  
-  .section7 .room {
+  .section7 .slick-slider{
+    width: 100%;
+  }
+
+  .section7 .room-2 {
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: 100%;
-    background-image: url(../public/Imagens/Secao07_Fundo_01.jpg);
+    background-image: url(../public/Imagens/Secao07_Fundo_02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    padding-bottom: 10px;
     box-sizing: border-box;
-  }
-  
-  .section7 .top-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .section7 {
-    height: auto;
-    position: relative;
-    padding: 0;
+    border-radius: 50%;
   }
   
   .section7 .room {
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: 100%;
-    background-image: url(../public/Imagens/Secao07_Fundo_01.jpg);
+    background-image: url(../public/Imagens/Secao07_Fundo_02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    padding-bottom: 10px;
     box-sizing: border-box;
+    border-radius: 50%;
   }
+  
   
   .section7 .top-section {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
+  }
+
+  .section7 .lamp{
+    position: absolute !important;
+    left: 0;
+  }
+
+  .section7 .lamp .furniture-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  .section7 .lamp img{
+    height: 450px;
+    max-width: none;
+  }
+
+  .section7 .tapete img{
+    max-width: 400px !important;
   }
   
   .section7 .lamp-container {
     position: relative;
+
   }
   
   .section7 .lamp-container img {
@@ -834,7 +839,7 @@ h3 {
   
   .section7 .bottom-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-end;
     flex: 1;
     position: relative;
@@ -846,18 +851,22 @@ h3 {
   
   .section7 .furniture img {
     max-width: 300px;
-    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
     z-index: 1;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
   }
   
   .section7 .furniture:hover img {
-    filter: drop-shadow(4px 2px 2px #f2f2f2) drop-shadow(-4px -4px 2px #f2f2f2);
+    filter: drop-shadow(4px 2px 2px #f2f2f2) drop-shadow(-4px -4px 2px #f2f2f2) grayscale(0%);
     transform: scale(1.05);
+    -webkit-filter: drop-shadow(4px 2px 2px #f2f2f2) drop-shadow(-4px -4px 2px #f2f2f2) grayscale(0%);
   }
+  
   
   .section7 .furniture-overlay {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 0;
     background-color: #d9c9c5;
     display: flex;
@@ -865,22 +874,17 @@ h3 {
     justify-content: flex-start;
     flex-direction: column;
     overflow: hidden;
-    transition: height 0.6s ease-in-out, width 0.6s ease-in-out, opacity 0.6s ease, transform 0.6s ease, border-radius 0.6s ease-in-out;
-    height: 45px;
+    transition: max-height 0.6s ease-in-out, width 0.6s ease-in-out, opacity 0.6s ease, transform 0.6s ease, border-radius 0.6s ease-in-out;
+    max-height: 33px;
     z-index: 2;
     border-radius: 50px;
     opacity: 0.8;
     width: 130px;
     transform: scale(1);
-    box-shadow:
-  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.10),
-  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-  100px 100px 80px rgba(0, 0, 0, 0.07)
-;
-  }
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.10),
+                6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028)
+}
+
   .section7 .furniture-overlay ::-webkit-scrollbar {
     width: 5px;
   }
@@ -891,30 +895,30 @@ h3 {
   }
   
   .section7 .furniture-info h2 {
-    margin: 10px 0;
+    margin: 0 0 10px 0px;
     text-align: center;
     font-size: 20px;
   }
   
   .section7 .furniture-description p {
-    margin: 0 10px;
     opacity: 0;
     transition: opacity 0.6s ease;
     z-index: 2;
-    padding: 15px;
+    padding: 0 15px 0px 15px;
     overflow: auto;
-    max-height: 100px;
+    max-height: 150px;
     font-size: 14px;
+    margin: 0;
 }
   
-  .section7 .furniture:hover .furniture-overlay {
+.section7 .furniture:hover .furniture-overlay {
     opacity: 0.9;
-    height: 200px;
-    max-height: 300px;
+    max-height: 200px; /* Mantém o limite da altura */
     width: 300px;
     border-radius: 25px;
     transform: scale(1.1);
-  }
+    overflow: visible;
+}
   
   .section7 .furniture:hover .furniture-description p {
     opacity: 1;
@@ -922,7 +926,9 @@ h3 {
   }
   
   
-  
+  .section7 .furniture-info{
+    padding: 3%;
+  }
   
   
   
@@ -1045,7 +1051,7 @@ h3 {
 }
 
 .section9 img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
 
