@@ -5,7 +5,6 @@ import imagemFundo02 from "./Imagens/imagem2.png";
 import imagemFundo03 from "./Imagens/img3.png";
 import logoServ from "./Imagens/logo_serv.png";
 import logoMavic from "./Imagens/logo mavic.png";
-import imagem_sessao8 from "./Imagens/sesao8.png";
 import Slider from "react-slick";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,6 +56,7 @@ function App() {
     },
     // Adicione mais testimonials aqui
   ];
+
   const brands = [
     require("./Imagens/frisokar.png"),
     require("./Imagens/Maranello.png"),
