@@ -98,22 +98,27 @@ function App() {
     {
       image: require("./Imagens/bit.png"),
       name: "Cadeira Bit",
+      descricao: "A banqueta Bit assento em polipropileno tem design minimalista, descontraído e com boa ergonomia. A base é elegante e sólida, garantindo estabilidade ao usuário"
     },
     {
       image: require("./Imagens/Addit.png"),
       name: "Cadeira Addit",
+      descricao: "A Addit traz um moderno e amplo encosto em tela, braços ajustáveis, espuma de boa resiliência e um mecanismo exclusivo, auxiliando na produtividade por um excelente custo-benefício"
     },
     {
       image: require("./Imagens/goah.png"),
       name: "Cadeira Goah",
+      descricao: "Goah une leveza, durabilidade e praticidade. Com encosto em tela dublada vulcanizada e estrutura de polímero injetado, possui assento em espuma injetada, braços fixos, ajuste de altura e giro, além de base e rodízios em nylon."
     },
     {
       image: require("./Imagens/prime.png"),
       name: "Poltrona Prime",
+      descricao: "A Poltrona Prime oferece uma experiência incomparável de conforto. Fabricada com esponja ensacada de alta qualidade, revestida em courino elegante, possui regulagem de altura e sistema de relax no encosto, garantindo bem-estar em todos os momentos."
     },
     {
       image: require("./Imagens/mesaR.png"),
       name: "Mesa reta",
+      descricao: "Mesa reta em MDF com duas gavetas, ideal para organizar seu espaço de trabalho com elegância e praticidade. Fabricada com materiais de alta qualidade, garante durabilidade e um visual moderno."
     },
 
   ]
@@ -350,10 +355,6 @@ function App() {
   };
 
   const [roomName, setRoomName] = useState("Room 1");
-  const handleMouseLeave = () => {
-    setPopupInfo('');
-    setPopupStyle({ display: 'none' });
-  };
 
   const redirectToWhatsApp = () => {
     const message =
@@ -495,7 +496,7 @@ function App() {
             <div className="opcoes-numero">
               <h1>01</h1>
               <div className="titulo-e-descricao">
-                <h2>lorem ipsum dolor</h2>
+                <h2>Experiência de Mercado</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -505,7 +506,7 @@ function App() {
             <div className="opcoes-numero">
               <h1>02</h1>
               <div className="titulo-e-descricao">
-                <h2>lorem ipsum dolor</h2>
+                <h2>Qualidade do Produto</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -515,7 +516,7 @@ function App() {
             <div className="opcoes-numero">
               <h1>03</h1>
               <div className="titulo-e-descricao">
-                <h2>lorem ipsum dolor</h2>
+                <h2>Atendimento Personalizado</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -525,7 +526,7 @@ function App() {
             <div className="opcoes-numero">
               <h1>04</h1>
               <div className="titulo-e-descricao">
-                <h2>lorem ipsum dolor</h2>
+                <h2>Assistência Técnica</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -535,17 +536,7 @@ function App() {
             <div className="opcoes-numero">
               <h1>05</h1>
               <div className="titulo-e-descricao">
-                <h2>lorem ipsum dolor</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </div>
-            <div className="opcoes-numero">
-              <h1>06</h1>
-              <div className="titulo-e-descricao">
-                <h2>lorem ipsum dolor</h2>
+                <h2>Diversidade de Produtos</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -570,7 +561,7 @@ function App() {
                 <h2>01</h2>
               </div>
               <div className="bottom-text">
-                <h2>Título</h2>
+                <h2>HOME OFFICE</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -584,7 +575,7 @@ function App() {
                 <h2>02</h2>
               </div>
               <div className="bottom-text">
-                <h2>Título</h2>
+                <h2>AMBIENTE COORPORATIVO</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -598,7 +589,7 @@ function App() {
                 <h2>03</h2>
               </div>
               <div className="bottom-text">
-                <h2>Título</h2>
+                <h2>AMBIENTE COOPERATIVO</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -612,7 +603,7 @@ function App() {
                 <h2>04</h2>
               </div>
               <div className="bottom-text">
-                <h2>Título</h2>
+                <h2>AMBIENTE COOLABORATIVO</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -620,7 +611,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="column column-5">
+{/*          <div className="column column-5">
             <div className="content">
               <div className="top-text">
                 <h2>05</h2>
@@ -633,7 +624,7 @@ function App() {
                 </p>
               </div>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
 
