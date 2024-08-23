@@ -561,7 +561,7 @@ function App() {
                 <h2>01</h2>
               </div>
               <div className="bottom-text">
-                <h2>HOME OFFICE</h2>
+                <h2>Home Office</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -575,7 +575,7 @@ function App() {
                 <h2>02</h2>
               </div>
               <div className="bottom-text">
-                <h2>AMBIENTE COORPORATIVO</h2>
+                <h2>Ambiente Corporativo</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -589,7 +589,7 @@ function App() {
                 <h2>03</h2>
               </div>
               <div className="bottom-text">
-                <h2>AMBIENTE COOPERATIVO</h2>
+                <h2>Ambiente Cooperativo</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -603,7 +603,7 @@ function App() {
                 <h2>04</h2>
               </div>
               <div className="bottom-text">
-                <h2>AMBIENTE COOLABORATIVO</h2>
+                <h2>Ambiente Colaborativo</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
