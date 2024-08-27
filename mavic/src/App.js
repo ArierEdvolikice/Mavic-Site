@@ -502,8 +502,8 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Experiência de Mercado</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Com 35 anos de mercado, nossa empresa oferece soluções confiáveis, com qualidade e experiência comprovadas.
+
                 </p>
               </div>
             </div>
@@ -512,8 +512,7 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Qualidade do Produto</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Nossos produtos garantem qualidade superior, unindo durabilidade e eficiência para superar suas expectativas.
                 </p>
               </div>
             </div>
@@ -521,9 +520,8 @@ function App() {
               <h1>03</h1>
               <div className="titulo-e-descricao">
                 <h2>Atendimento Personalizado</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p>           
+                  Oferecemos atendimento personalizado, focado em entender e atender às suas necessidades específicas, garantindo uma experiência única e satisfatória.
                 </p>
               </div>
             </div>
@@ -532,8 +530,7 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Assistência Técnica</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Nossa assistência técnica especializada resolve suas necessidades com eficiência, garantindo suporte de qualidade e total tranquilidade.
                 </p>
               </div>
             </div>
@@ -542,8 +539,7 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Diversidade de Produtos</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Oferecemos uma ampla diversidade de produtos, garantindo opções para todas as suas necessidades com a mesma qualidade e confiança.
                 </p>
               </div>
             </div>
@@ -567,8 +563,7 @@ function App() {
               <div className="bottom-text">
                 <h2>Home Office</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Soluções ergonômicas e funcionais para criar um espaço de trabalho confortável e eficiente na sua casa.
                 </p>
               </div>
             </div>
@@ -581,8 +576,7 @@ function App() {
               <div className="bottom-text">
                 <h2>Ambiente Corporativo</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Mobiliário de alta qualidade que valoriza a imagem da empresa, promovendo produtividade e bem-estar no local de trabalho.
                 </p>
               </div>
             </div>
@@ -593,10 +587,9 @@ function App() {
                 <h2>03</h2>
               </div>
               <div className="bottom-text">
-                <h2>Ambiente Cooperativo</h2>
+                <h2>Ambiente Coletivo</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Produtos versáteis e duráveis, ideais para espaços de uso comum, que garantem conforto e praticidade para todos.
                 </p>
               </div>
             </div>
@@ -609,8 +602,7 @@ function App() {
               <div className="bottom-text">
                 <h2>Ambiente Colaborativo</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Móveis que incentivam a interação e a criatividade, criando espaços dinâmicos e inspiradores para equipes trabalharem juntas.
                 </p>
               </div>
             </div>
@@ -626,7 +618,7 @@ function App() {
           <div className="project project-01">
             <div className="project-content">
               <div className="project-info">
-                <h2>título do projeto</h2>
+                <h2>Tergran</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -652,7 +644,7 @@ function App() {
                 />
               </div>
               <div className="project-info">
-                <h2>título do projeto</h2>
+                <h2>Aço Cearense</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -666,7 +658,7 @@ function App() {
             </div>
             <div className="project-content">
               <div className="project-info">
-                <h2>título do projeto</h2>
+                <h2>Santa Edwiges Supermercado</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -689,7 +681,7 @@ function App() {
           <div className="project project-02">
             <div className="project-content">
               <div className="project-info">
-                <h2>título do projeto</h2>
+                <h2>WSTC</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -715,7 +707,7 @@ function App() {
                 />
               </div>
               <div className="project-info">
-                <h2>título do projeto</h2>
+                <h2>M Dias Branco</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -729,7 +721,7 @@ function App() {
             </div>
             <div className="project-content">
               <div className="project-info">
-                <h2>título do projeto</h2>
+                <h2>SJ Imóveis</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
