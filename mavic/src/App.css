@@ -776,7 +776,7 @@ h3 {
   .section7 .room {
     display: flex;
     flex-direction: column;
-    background-image: url(../public/Imagens/Secao07_Fundo_02.jpg);
+    background-image: url(./Imagens/ambiente1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
