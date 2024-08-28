@@ -443,7 +443,11 @@ function App() {
             <div className="slide-content">
               <h2>{slide.text.title}</h2>
               <p>{slide.text.description}</p>
+              <div className="contact-button segundo">
+            <button onClick={redirectToWhatsApp}>contate-nos</button>
+          </div>
             </div>
+            
           </div>
         ))}
       </div>
@@ -603,20 +607,6 @@ function App() {
               </div>
             </div>
           </div>
-{/*          <div className="column column-5">
-            <div className="content">
-              <div className="top-text">
-                <h2>05</h2>
-              </div>
-              <div className="bottom-text">
-                <h2>Título</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </div>
-          </div>*/}
         </div>
       </div>
 
@@ -942,6 +932,21 @@ function App() {
         </Slider>
       </div>
 
+      <div id="section9" className="section section9">
+        <h1>nossos parceiros</h1>
+        <Slider {...settings} className="slider-container">
+          {brands.map((logo, index) => (
+            <div key={index} className="container">
+              <img
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
       <div id="section8" className="section section8">
         <div className="logo-container">
           <img src={logoServ} alt="Logomarca" className="logo" />
@@ -990,21 +995,6 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div id="section9" className="section section9">
-        <h1>nossos parceiros</h1>
-        <Slider {...settings} className="slider-container">
-          {brands.map((logo, index) => (
-            <div key={index} className="container">
-              <img
-                src={logo}
-                alt={`Logo ${index + 1}`}
-                style={{ width: "100%", height: "auto" }}
-              />
-            </div>
-          ))}
-        </Slider>
       </div>
 
       <div id="section10" className="section section10">
