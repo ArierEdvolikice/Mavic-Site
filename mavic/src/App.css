@@ -867,35 +867,36 @@ h3 {
  width: 100%;
 }
 
-.section7 .room-2 {
- display: flex;
- flex-direction: column;
- background-image: url(../public/Imagens/Secao07_Fundo_02.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- padding: 0;
- box-sizing: border-box;
- border-radius: 50%;
-}
-
-.section7 .room {
- display: flex;
- flex-direction: column;
- background-image: url(../public/Imagens/Secao07_Fundo_02.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- padding: 0;
- box-sizing: border-box;
- border-radius: 50%;
-}
-
-.section7 .top-section {
- flex: 1;
- display: flex;
- align-items: flex-start;
- justify-content: center;
- position: relative;
-}
+  .section7 .room-2 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../public/Imagens/Secao07_Fundo_02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+  
+  .section7 .room {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./Imagens/ambiente1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+  
+  
+  .section7 .top-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  }
 
 .section7 .lamp {
  position: absolute !important;
