@@ -29,6 +29,10 @@
  border-radius: 50px;
 }
 
+*{
+  scroll-behavior: smooth;
+}
+
 p {
  font-family: "Montserrat", sans-serif;
  font-weight: 300;
@@ -506,7 +510,7 @@ h3 {
 }
 
 .section5 {
- background-color: #d9c9c5;
+ background-color: #f2f2f2;
  padding: 0px;
  height: 100vh;
 }
@@ -791,6 +795,10 @@ h3 {
  height: 44px;
 }
 
+.section6 .popup-content h2{
+  font-size: 40px;
+}
+
 .section6 .gallery {
  display: grid;
  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -854,6 +862,11 @@ h3 {
 .section7 {
  height: 120vh;
  position: relative;
+}
+
+.section7 h1{
+  font-size: 50px;
+  text-align: center;
 }
 
 .section7 .slick-slider {
@@ -1133,7 +1146,7 @@ h3 {
 }
 
 .section10 {
- background-color: #1e88e5;
+ background-color: #f2f2f2;
  padding: 0;
 }
 
@@ -1169,12 +1182,14 @@ h3 {
 }
 
 .section11 .testimonial-image {
- display: inline;
- width: 100px;
- height: 100px;
- border-radius: 50%;
- margin-bottom: 20px;
- object-fit: cover;
+  display: inline;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: solid 3px;
+  background-color: #d9c9c5;
 }
 
 .section11 .testimonial-name {
@@ -1193,6 +1208,10 @@ h3 {
  color: #261914;
  padding: 30px;
  margin-bottom: 80px;
+}
+
+.section12 h1{
+  font-size: 50px;
 }
 
 .section13 {
@@ -1541,9 +1560,6 @@ h3 {
 
  .section7 .bottom-section {
   justify-content: space-evenly;
- }
-
- .section7 .tapete {
  }
 
  .section7 .furniture:hover .furniture-overlay {

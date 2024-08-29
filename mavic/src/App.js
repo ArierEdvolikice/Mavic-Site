@@ -7,6 +7,8 @@ import logoServ from "./Imagens/logo_serv.png";
 import logoMavic from "./Imagens/logo mavic.png";
 import Slider from "react-slick";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -20,6 +22,12 @@ function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -365,7 +373,7 @@ function App() {
 
   const [activePopup, setActivePopup] = useState(null);
 
-  // Hook para gerenciar o overflow do body
+  // Overlow do pop-up
   useEffect(() => {
     if (activePopup) {
       document.body.style.overflow = "hidden";
@@ -592,12 +600,12 @@ function App() {
           </div>
         ))}
       </div>
-
-      <div id="section2" className="section section2">
-        <div className="slider-container">
+      <div id="section2"  className="section section2"
+      >
+        <div  className="slider-container">
           <Slider {...sliderSettings}>
             {mobilia.map((item, index) => (
-              <div className="slide-item" key={index}>
+              <div data-aos="zoom-in" className="slide-item" key={index}>
                 <div className="image-container">
                   <img src={item.image} alt={item.name} />
                   <div className="circle-overlay"></div>
@@ -610,12 +618,12 @@ function App() {
       </div>
 
       <div id="section3" className="section section3">
-        <p>Em destaque</p>
-        <h1>mais vendidos</h1>
+        <p data-aos="zoom-in">Em destaque</p>
+        <h1 data-aos="zoom-in">mais vendidos</h1>
         <div className="slider-container">
           <Slider {...sliderSettings}>
             {maisVendidos.map((item, index) => (
-              <div className="slide-item" key={index}>
+              <div data-aos="zoom-in" className="slide-item" key={index}>
                 <div className="image-container">
                   <img src={item.image} alt="Imagem Cadeira 1" />
                 </div>
@@ -628,9 +636,9 @@ function App() {
       </div>
 
       <div id="section4" className="section section4">
-        <h1>por que nos escolher?</h1>
+        <h1 data-aos="fade-down" >por que nos escolher?</h1>
         <div className="content-wrapper">
-          <div className="left-column">
+          <div data-aos="fade-right" data-aos-delay="500" className="left-column">
             <div className="opcoes-numero">
               <h1>01</h1>
               <div className="titulo-e-descricao">
@@ -685,7 +693,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="right-column">
+          <div data-aos="fade-left" data-aos-delay="500" className="right-column">
             <img
               src={require("./Imagens/time.png")}
               alt="Descrição da imagem"
@@ -695,7 +703,7 @@ function App() {
       </div>
 
       <div id="section5" className="section section5">
-        <div className="columns-wrapper">
+        <div data-aos="fade-up" className="columns-wrapper">
           <div className="column column-1">
             <div className="content">
               <div className="top-text">
@@ -757,10 +765,10 @@ function App() {
       </div>
 
       <div id="section6" className="section section6">
-        <h1>galeria de projetos</h1>
+        <h1 data-aos="zoom-in" >galeria de projetos</h1>
 
         {/* Slider 1 */}
-        <Slider {...settingsPage1} className="projects-page1">
+        <Slider  {...settingsPage1} className="projects-page1">
           {projectGroups.map((group, groupIndex) => (
             <div
               key={groupIndex}
@@ -771,7 +779,7 @@ function App() {
                   key={project.id}
                   className={`project project-${project.id}`}
                 >
-                  <div className="project-content">
+                  <div data-aos="zoom-in-up" data-aos-offset="0" className="project-content">
                     <div className="project-info">
                       <h2>{project.title}</h2>
                       <p>{project.description}</p>
@@ -830,12 +838,12 @@ function App() {
         )}
       </div>
 
-      <div id="section7" className="section section7">
-        <h1>Ambiente Modular</h1>
-        <p>Nome do Ambiente: {roomName}</p>
+      <div  id="section7" className="section section7">
+        <h1 data-aos="zoom-out">Ambiente Modular</h1>
+        <p data-aos="zoom-out">Nome do Ambiente: {roomName}</p>
         <Slider {...settingsModular}>
           {/* Primeira Room */}
-          <div className="room">
+          <div data-aos="zoom-out" className="room">
             <div className="top-section">
               <div className="lamp-container">
                 <img
@@ -956,7 +964,7 @@ function App() {
         </Slider>
       </div>
 
-      <div id="section9" className="section section9">
+      <div data-aos="zoom-out" id="section9" className="section section9">
         <h1>nossos parceiros</h1>
         <Slider {...settings} className="slider-container">
           {brands.map((logo, index) => (
@@ -972,10 +980,10 @@ function App() {
       </div>
 
       <div id="section8" className="section section8">
-        <div className="logo-container">
+        <div data-aos="zoom-out" className="logo-container">
           <img src={logoServ} alt="Logomarca" className="logo" />
         </div>
-        <div className="content-wrapper">
+        <div data-aos="zoom-in" className="content-wrapper">
           <div className="image-container centered">
             <img
               src="/Imagens/ImagemSecao08.png"
@@ -1021,8 +1029,8 @@ function App() {
         </div>
       </div>
 
-      <div id="section10" className="section section10">
-        <iframe
+      <div  id="section10" className="section section10">
+        <iframe data-aos="fade"
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/D0UnqGm_miA?si=VQp1_lPJo-tIik15&amp;controls=0"
@@ -1033,7 +1041,7 @@ function App() {
         ></iframe>
       </div>
 
-      <div id="section11" className="section section11">
+      <div data-aos="fade-up" id="section11" className="section section11">
         <h1>testimonials</h1>
         <Slider {...settingsTestemunials} className="testimonials-carousel">
           {testimonials.map((testimonial, index) => (
@@ -1078,7 +1086,7 @@ function App() {
         </Slider>
       </div>
 
-      <div id="section13" className="section section13">
+      <div data-aos="fade-down"  id="section13" className="section section13">
         <div className="column total-footer">
           <div className="column column-left">
             <div className="form-container">
