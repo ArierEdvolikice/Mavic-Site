@@ -42,7 +42,7 @@ function App() {
     {
       image: require("./Imagens/lady.png"),
       name: "John Doe",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
     {
       image: require("./Imagens/frisokar.png"),
@@ -98,30 +98,34 @@ function App() {
     {
       image: require("./Imagens/bit.png"),
       name: "Cadeira Bit",
-      descricao: "A banqueta Bit assento em polipropileno tem design minimalista, descontraído e com boa ergonomia. A base é elegante e sólida, garantindo estabilidade ao usuário"
+      descricao:
+        "A banqueta Bit assento em polipropileno tem design minimalista, descontraído e com boa ergonomia. A base é elegante e sólida, garantindo estabilidade ao usuário",
     },
     {
       image: require("./Imagens/Addit.png"),
       name: "Cadeira Addit",
-      descricao: "A Addit traz um moderno e amplo encosto em tela, braços ajustáveis, espuma de boa resiliência e um mecanismo exclusivo, auxiliando na produtividade por um excelente custo-benefício"
+      descricao:
+        "A Addit traz um moderno e amplo encosto em tela, braços ajustáveis, espuma de boa resiliência e um mecanismo exclusivo, auxiliando na produtividade por um excelente custo-benefício",
     },
     {
       image: require("./Imagens/goah.png"),
       name: "Cadeira Goah",
-      descricao: "Goah une leveza, durabilidade e praticidade. Com encosto em tela dublada vulcanizada e estrutura de polímero injetado, possui assento em espuma injetada, braços fixos, ajuste de altura e giro, além de base e rodízios em nylon."
+      descricao:
+        "Goah une leveza, durabilidade e praticidade. Com encosto em tela dublada vulcanizada e estrutura de polímero injetado, possui assento em espuma injetada, braços fixos, ajuste de altura e giro, além de base e rodízios em nylon.",
     },
     {
       image: require("./Imagens/prime.png"),
       name: "Poltrona Prime",
-      descricao: "A Poltrona Prime oferece uma experiência incomparável de conforto. Fabricada com esponja ensacada de alta qualidade, revestida em courino elegante, possui regulagem de altura e sistema de relax no encosto, garantindo bem-estar em todos os momentos."
+      descricao:
+        "A Poltrona Prime oferece uma experiência incomparável de conforto. Fabricada com esponja ensacada de alta qualidade, revestida em courino elegante, possui regulagem de altura e sistema de relax no encosto, garantindo bem-estar em todos os momentos.",
     },
     {
       image: require("./Imagens/mesaR.png"),
       name: "Mesa reta",
-      descricao: "Mesa reta em MDF com duas gavetas, ideal para organizar seu espaço de trabalho com elegância e praticidade. Fabricada com materiais de alta qualidade, garante durabilidade e um visual moderno."
+      descricao:
+        "Mesa reta em MDF com duas gavetas, ideal para organizar seu espaço de trabalho com elegância e praticidade. Fabricada com materiais de alta qualidade, garante durabilidade e um visual moderno.",
     },
-
-  ]
+  ];
 
   const mobilia = [
     {
@@ -175,8 +179,8 @@ function App() {
     {
       image: require("./Imagens/armarioBaico.png"),
       name: "Armário Baixo",
-    }
-  ]
+    },
+  ];
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -188,12 +192,6 @@ function App() {
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
-    );
   };
 
   useEffect(() => {
@@ -333,7 +331,7 @@ function App() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     appendDots: (dots) => (
       <div className="dots-container">
@@ -363,6 +361,150 @@ function App() {
       message
     )}`;
     window.open(whatsappLink, "_blank");
+  };
+
+  const [activePopup, setActivePopup] = useState(null);
+
+  // Hook para gerenciar o overflow do body
+  useEffect(() => {
+    if (activePopup) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Limpeza do efeito ao desmontar o componente
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [activePopup]);
+
+  const handlePopupToggle = (projectId) => {
+    setActivePopup(projectId === activePopup ? null : projectId);
+  };
+
+  const projects = [
+    {
+      id: 1,
+      title: "Tergran",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "/Imagens/Imagem_Projeto_01.png",
+      details: "Mais informações sobre o projeto Tergran...",
+      gallery: [
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+      ],
+    },
+    {
+      id: 2,
+      title: "Aço Cearense",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "/Imagens/Imagem_Projeto_01-Reverse.png",
+      details: "Mais informações sobre o projeto Aço Cearense...",
+      gallery: [
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+      ],
+    },
+    {
+      id: 3,
+      title: "Santa Edwiges Supermercado",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "/Imagens/Imagem_Projeto_01.png",
+      details: "Mais informações sobre o projeto Santa Edwiges Supermercado...",
+      gallery: [
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+      ],
+    },
+    {
+      id: 4,
+      title: "WSTC",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "/Imagens/Imagem_Projeto_01.png",
+      details: "Mais informações sobre o projeto WSTC...",
+      gallery: [
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+      ],
+    },
+    {
+      id: 5,
+      title: "M Dias Branco",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "/Imagens/Imagem_Projeto_01-Reverse.png",
+      details: "Mais informações sobre o projeto M Dias Branco...",
+      gallery: [
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+      ],
+    },
+    {
+      id: 6,
+      title: "SJ Imóveis",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: "/Imagens/Imagem_Projeto_01.png",
+      details: "Mais informações sobre o projeto SJ Imóveis...",
+      gallery: [
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+        "/Imagens/Projetos/Tergran/Imagem_Projeto_01.png",
+      ],
+    },
+  ];
+
+  const pageSize = 3;
+  const projectGroups = [];
+  for (let i = 0; i < projects.length; i += pageSize) {
+    projectGroups.push(projects.slice(i, i + pageSize));
+  }
+
+  const Gallery = ({ images }) => {
+    return (
+      <div className="gallery">
+        {images.map((image, index) => (
+          <div key={index} className="gallery-image">
+            <img src={image} alt={`Galeria ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const handleImageClick = (image) => {
+    const overlay = document.getElementById("fullscreen-overlay");
+    const fullscreenImage = document.getElementById("fullscreen-image");
+
+    fullscreenImage.src = image;
+    overlay.classList.add("active");
+  };
+
+  const closeFullscreen = () => {
+    const overlay = document.getElementById("fullscreen-overlay");
+    overlay.classList.remove("active");
   };
 
   return (
@@ -444,10 +586,9 @@ function App() {
               <h2>{slide.text.title}</h2>
               <p>{slide.text.description}</p>
               <div className="contact-button segundo">
-            <button onClick={redirectToWhatsApp}>contate-nos</button>
-          </div>
+                <button onClick={redirectToWhatsApp}>contate-nos</button>
+              </div>
             </div>
-            
           </div>
         ))}
       </div>
@@ -458,10 +599,7 @@ function App() {
             {mobilia.map((item, index) => (
               <div className="slide-item" key={index}>
                 <div className="image-container">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                  />
+                  <img src={item.image} alt={item.name} />
                   <div className="circle-overlay"></div>
                 </div>
                 <h2>{item.name}</h2>
@@ -478,12 +616,8 @@ function App() {
           <Slider {...sliderSettings}>
             {maisVendidos.map((item, index) => (
               <div className="slide-item" key={index}>
-
                 <div className="image-container">
-                 <img
-                    src={item.image}
-                    alt="Imagem Cadeira 1"
-                  />
+                  <img src={item.image} alt="Imagem Cadeira 1" />
                 </div>
                 <h2>{item.name}</h2>
                 <p>{item.descricao}</p>
@@ -502,8 +636,8 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Experiência de Mercado</h2>
                 <p>
-                Com 35 anos de mercado, nossa empresa oferece soluções confiáveis, com qualidade e experiência comprovadas.
-
+                  Com 35 anos de mercado, nossa empresa oferece soluções
+                  confiáveis, com qualidade e experiência comprovadas.
                 </p>
               </div>
             </div>
@@ -512,7 +646,8 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Qualidade do Produto</h2>
                 <p>
-                Nossos produtos garantem qualidade superior, unindo durabilidade e eficiência para superar suas expectativas.
+                  Nossos produtos garantem qualidade superior, unindo
+                  durabilidade e eficiência para superar suas expectativas.
                 </p>
               </div>
             </div>
@@ -520,8 +655,10 @@ function App() {
               <h1>03</h1>
               <div className="titulo-e-descricao">
                 <h2>Atendimento Personalizado</h2>
-                <p>           
-                  Oferecemos atendimento personalizado, focado em entender e atender às suas necessidades específicas, garantindo uma experiência única e satisfatória.
+                <p>
+                  Oferecemos atendimento personalizado, focado em entender e
+                  atender às suas necessidades específicas, garantindo uma
+                  experiência única e satisfatória.
                 </p>
               </div>
             </div>
@@ -530,7 +667,9 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Assistência Técnica</h2>
                 <p>
-                Nossa assistência técnica especializada resolve suas necessidades com eficiência, garantindo suporte de qualidade e total tranquilidade.
+                  Nossa assistência técnica especializada resolve suas
+                  necessidades com eficiência, garantindo suporte de qualidade e
+                  total tranquilidade.
                 </p>
               </div>
             </div>
@@ -539,7 +678,9 @@ function App() {
               <div className="titulo-e-descricao">
                 <h2>Diversidade de Produtos</h2>
                 <p>
-                Oferecemos uma ampla diversidade de produtos, garantindo opções para todas as suas necessidades com a mesma qualidade e confiança.
+                  Oferecemos uma ampla diversidade de produtos, garantindo
+                  opções para todas as suas necessidades com a mesma qualidade e
+                  confiança.
                 </p>
               </div>
             </div>
@@ -563,7 +704,8 @@ function App() {
               <div className="bottom-text">
                 <h2>Home Office</h2>
                 <p>
-                Soluções ergonômicas e funcionais para criar um espaço de trabalho confortável e eficiente na sua casa.
+                  Soluções ergonômicas e funcionais para criar um espaço de
+                  trabalho confortável e eficiente na sua casa.
                 </p>
               </div>
             </div>
@@ -576,7 +718,8 @@ function App() {
               <div className="bottom-text">
                 <h2>Ambiente Corporativo</h2>
                 <p>
-                Mobiliário de alta qualidade que valoriza a imagem da empresa, promovendo produtividade e bem-estar no local de trabalho.
+                  Mobiliário de alta qualidade que valoriza a imagem da empresa,
+                  promovendo produtividade e bem-estar no local de trabalho.
                 </p>
               </div>
             </div>
@@ -589,7 +732,8 @@ function App() {
               <div className="bottom-text">
                 <h2>Ambiente Coletivo</h2>
                 <p>
-                Produtos versáteis e duráveis, ideais para espaços de uso comum, que garantem conforto e praticidade para todos.
+                  Produtos versáteis e duráveis, ideais para espaços de uso
+                  comum, que garantem conforto e praticidade para todos.
                 </p>
               </div>
             </div>
@@ -602,7 +746,9 @@ function App() {
               <div className="bottom-text">
                 <h2>Ambiente Colaborativo</h2>
                 <p>
-                Móveis que incentivam a interação e a criatividade, criando espaços dinâmicos e inspiradores para equipes trabalharem juntas.
+                  Móveis que incentivam a interação e a criatividade, criando
+                  espaços dinâmicos e inspiradores para equipes trabalharem
+                  juntas.
                 </p>
               </div>
             </div>
@@ -615,195 +761,73 @@ function App() {
 
         {/* Slider 1 */}
         <Slider {...settingsPage1} className="projects-page1">
-          <div className="project project-01">
-            <div className="project-content">
-              <div className="project-info">
-                <h2>Tergran</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
+          {projectGroups.map((group, groupIndex) => (
+            <div
+              key={groupIndex}
+              className={`project-group group-${groupIndex + 1}`}
+            >
+              {group.map((project) => (
+                <div
+                  key={project.id}
+                  className={`project project-${project.id}`}
+                >
+                  <div className="project-content">
+                    <div className="project-info">
+                      <h2>{project.title}</h2>
+                      <p>{project.description}</p>
+                      <div className="contact-button">
+                        <button onClick={() => handlePopupToggle(project.id)}>
+                          ver projeto
+                        </button>
+                      </div>
+                    </div>
+                    <div className="project-image">
+                      <img
+                        src={project.image}
+                        alt={`Imagem do ${project.title}`}
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01.png"
-                  alt="Imagem do Projeto 01"
-                />
-              </div>
+              ))}
             </div>
-            <div className="project-content reverse">
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01-Reverse.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-              <div className="project-info">
-                <h2>Aço Cearense</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <div className="project-info">
-                <h2>Santa Edwiges Supermercado</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="project project-02">
-            <div className="project-content">
-              <div className="project-info">
-                <h2>WSTC</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-            </div>
-            <div className="project-content reverse">
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01-Reverse.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-              <div className="project-info">
-                <h2>M Dias Branco</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <div className="project-info">
-                <h2>SJ Imóveis</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="project project-02">
-            <div className="project-content">
-              <div className="project-info">
-                <h2>título do projeto</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-            </div>
-            <div className="project-content reverse">
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01-Reverse.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-              <div className="project-info">
-                <h2>título do projeto</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <div className="project-info">
-                <h2>título do projeto</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div className="contact-button">
-                  <button>ver projeto</button>
-                </div>
-              </div>
-              <div className="project-image">
-                <img
-                  src="/Imagens/Imagem_Projeto_01.png"
-                  alt="Imagem do Projeto 02"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
+
+        {/* Popup */}
+        {activePopup && (
+          <div className="popup">
+            <div className="popup-content">
+              {projects.find((p) => p.id === activePopup) && (
+                <div>
+                  <button onClick={() => setActivePopup(null)}>X</button>
+                  <h2>{projects.find((p) => p.id === activePopup).title}</h2>
+                  <p>{projects.find((p) => p.id === activePopup).details}</p>
+                  <div className="gallery">
+                    {projects
+                      .find((p) => p.id === activePopup)
+                      .gallery.map((image, index) => (
+                        <div key={index} className="gallery-image">
+                          <img
+                            src={image}
+                            alt={`Imagem ${index + 1}`}
+                            onClick={() => handleImageClick(image)}
+                          />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* Overlay em tela cheia */}
+            <div className="fullscreen-overlay" id="fullscreen-overlay">
+              <button className="close-button" onClick={closeFullscreen}>
+                X
+              </button>
+              <img id="fullscreen-image" src="" alt="Imagem em tela cheia" />
+            </div>
+          </div>
+        )}
       </div>
 
       <div id="section7" className="section section7">
@@ -1033,7 +1057,7 @@ function App() {
           {posts.map((post) => (
             <div key={post.id} className="instagram-post">
               {post.media_type === "IMAGE" ||
-                post.media_type === "CAROUSEL_ALBUM" ? (
+              post.media_type === "CAROUSEL_ALBUM" ? (
                 <img src={post.media_url} alt={post.caption} />
               ) : (
                 <video controls>
