@@ -660,7 +660,6 @@ h3 {
  font-weight: 100;
  margin: 0;
  margin-top: 0px;
- padding-top: 50px;
 }
 
 .section6 .projects-page1,
@@ -797,6 +796,7 @@ h3 {
 
 .section6 .popup-content h2{
   font-size: 40px;
+  padding-top: 50px;
 }
 
 .section6 .gallery {
